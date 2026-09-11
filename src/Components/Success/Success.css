@@ -1,0 +1,277 @@
+/* ================================
+   SUCCESS SECTION
+================================ */
+
+.success-section {
+  width: 100%;
+  min-height: 669px;
+  background: #ffffff;
+  padding-top: 4px 100px 80px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* ================================
+   TITLE
+================================ */
+
+.success-title {
+    font-family: PlusJakartaSans;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+    color: var(--Dark-blue, #161D46);
+}
+
+.success-title span {
+color: var(--Light-Blue, #3982F6);
+
+}
+
+
+/* ================================
+   MAIN WRAPPER
+================================ */
+
+.success-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  margin-top: 60px ;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+/* ================================
+   IMAGE
+================================ */
+
+.success-image-box {
+  position: relative;
+border-radius: 12px;
+  width: 380px;
+  height: 400px;
+  flex-shrink: 0;
+  overflow: hidden;
+border: 1px solid var(--Image-Stroke, #9FA0A4);
+}
+
+.success-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* ================================
+   PLAY BUTTON
+================================ */
+
+.success-play {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 60px;
+  height: 60px;
+
+  transform: translate(-50%, -50%);
+
+  border: none;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  padding-left: 4px;
+}
+
+
+/* ================================
+   TESTIMONIAL CONTENT
+================================ */
+
+.success-content {
+  width: 555px;
+
+  margin-left: 60px;
+  padding-top: 32px;
+
+  box-sizing: border-box;
+}
+
+
+/* ================================
+   QUOTE
+================================ */
+
+.quote-icon {
+  width: 80px;
+height: 60px;
+
+
+  margin-bottom: 33.22px;
+}
+
+.star{
+  width: 20px;
+height: 20px;
+
+
+}
+/* ================================
+   STARS
+================================ */
+
+.success-stars {
+
+
+display: flex;
+align-items: center;
+gap: 10px;
+  margin-bottom: 24px;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.success-description {
+  margin: 0;
+
+  max-width: 555px;
+
+
+font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+color: var(--Text, #3E4354);
+
+}
+
+
+/* ================================
+   PERSON
+================================ */
+
+.success-person {
+  margin-top: 24px;
+}
+
+.success-person h3 {
+  margin: 0px 0px 4px;
+font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: 0px;
+color: var(--Dark-blue, #161D46);
+
+
+}
+
+.success-person p {
+  margin: 0;
+
+ font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+color: var(--Text, #3E4354);
+
+}
+
+
+/* ================================
+   ARROWS
+================================ */
+
+.success-arrow {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 64px;
+  height: 64px;
+border: none;
+border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  padding: 0;
+}
+
+.success-arrow:hover {
+  background: #f4f8ff;
+}
+
+.success-arrow-left {
+  left: 100px;
+}
+
+.success-arrow-right {
+  right: 100px;
+}
+
+.success-arrow-left:hover {
+  transform: translateY(-50%) translateX(-3px);
+}
+
+.success-arrow-right:hover {
+  transform: translateY(-50%) translateX(3px);
+}
+
+
+/* ================================
+   DOTS
+================================ */
+
+.success-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 40px;
+}
+
+.success-dot {
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: #D3D3D3;
+}
+
+.success-dot.active {
+  background: #161D46;
+}
+

@@ -1,0 +1,134 @@
+:root {
+  --White: #FFFFFF;
+  --Yellow: #F5C147;
+  --Dark-Blue: #161D46;
+  --Text-Light: #E2E8F0;
+}
+
+/* Outer Section: Padding 20px 80px 80px, Background #FFFFFF */
+.book-free-section {
+  width: 100%;
+  background: var(--White);
+  padding: 20px 80px 80px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Inner Container: Background Image, Padding 180px 132px 150px */
+.book-free-banner {
+  width: 100%;
+  max-width: 1352px;
+  /* Adjust image path to your banner background location */
+  background: url("/public//Images/cta.webp") center center / cover no-repeat, #101636;
+  border-radius: 24px;
+  padding: 180px 152px 150px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* First Text (Title) & Margin Bottom 12px */
+.book-free-title {
+font-family: PlusJakartaSans;
+font-weight: 700;
+font-style: Bold;
+font-size: 56px;
+line-height: 60px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: var(--White, #FFFFFF);
+
+  margin: 0px 0px 12px 0px;
+}
+
+/* Accent Word Color */
+.book-free-title span {
+color: var(--Yellow, #F5C147);
+
+}
+
+/* Subtitle Description */
+.book-free-desc {
+ font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+color: var(--White, #FFFFFF);
+
+}
+
+/* Last Button & Margin Top 40px */
+.book-free-btn {
+  margin-top: 40px;
+  cursor: pointer;
+  width: 330px;
+height: 64px;
+border-radius: 30px;
+background: var(--Yellow, #F5C147);
+border: 1px solid var(--White, #FFFFFF);
+box-shadow: 1px 2px 0px 0px #FFFFFF;
+font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+color: var(--Dark-blue, #161D46);
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+.book-free-btn:hover {
+  transform: translateY(-2px);
+  background-color: #e2af3b;
+  box-shadow: 0px 6px 20px rgba(245, 193, 71, 0.4);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .book-free-section {
+    padding: 20px 40px 40px;
+  }
+  
+  .book-free-banner {
+    padding: 100px 40px;
+  }
+
+  .book-free-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+
+@media (max-width: 600px) {
+  .book-free-section {
+    padding: 20px 16px 40px;
+  }
+
+  .book-free-banner {
+    padding: 60px 20px;
+    border-radius: 12px;
+  }
+
+  .book-free-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .book-free-desc {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}

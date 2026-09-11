@@ -1,0 +1,114 @@
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.why-choose-us {
+  width: 100%;
+  max-width: 1512px;
+  height: 508px;
+  overflow: hidden;
+  padding: 10px 120px;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+
+
+.why-choose-title {
+    margin: 0;
+    font-family: PlusJakartaSans;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 42px;
+    line-height: 55px;
+    letter-spacing: 0%;
+    color: var(--Dark-blue, #161D46); 
+}
+
+
+.why-choose-title span {
+
+color: var(--Light-Blue, #3982F6);
+
+}
+
+
+.why-choose-description {
+    max-width: 410px;
+margin: 18px 0px 0px;
+    color: #3E4354;
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0%;
+}
+
+
+
+.why-choose-card {
+  width: 320px;
+  height: 219px;
+padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 26px;
+  background: #ffffff;
+  border-radius: 24px;
+box-shadow: 0px 2px 8px 0px #7C787833;
+color: var(--Text, #3E4354);
+
+}
+
+
+.why-choose-icon {
+width: 45px;
+height: 45px;
+
+}
+
+
+/* =========================
+   CARD TITLE
+========================= */
+
+.why-choose-card-title {
+  width: 290px;
+  color: #454a5d;
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+
+  line-height: 35px;
+
+  text-align: center;
+}
+.why-card-1{
+
+
+}
+
+
+
+.why-choose-us___1{
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.why-choose-us___2{
+  display: flex;
+    gap: 40px;
+}
+.whychooseus___lst{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: end;
+    margin-top: 40px;
+}

@@ -1,0 +1,89 @@
+/* Container with Background Image */
+.stats-container {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  background-color: #121943; /* Fallback Navy Blue */
+  
+  /* Set your background image path here */
+  background-image: url("/public/Images/stats.webp"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding: 60px 150px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content Wrapper */
+.stats-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1221px;
+  width: 100%;
+}
+
+/* Individual Stat Box */
+.stat-item {
+  /* flex: 1; */
+  text-align: center;
+  padding: 0 15px;
+}
+
+/* Gold Heading Numbers */
+.stat-value {
+ font-family: PlusJakartaSans;
+font-weight: 700;
+font-style: Bold;
+font-size: 42px;
+line-height: 55px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+  margin: 0px 0px 16px 0px;
+  color: var(--Yellow, #F5C147);
+
+}
+
+/* Text Description */
+.stat-description {
+font-family: PlusJakartaSans;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: var(--Text-2, #DFDFDF);
+
+}
+
+/* Vertical Dividers between columns */
+.stat-divider {
+  width: 4px;
+  height: 80px;
+  background-color: #DFE8F11A;
+  flex-shrink: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .stats-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .stat-divider {
+    width: 60px;
+    height: 1px;
+  }
+
+  .stat-value {
+    font-size: 40px;
+  }
+}

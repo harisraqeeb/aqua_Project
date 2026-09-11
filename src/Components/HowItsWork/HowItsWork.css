@@ -1,0 +1,211 @@
+:root {
+  --Light-bg: #F5FBFF;
+  --Dark-blue: #161D46;
+  --Light-Blue: #3982F6;
+  --Text: #3E4354;
+  --Yellow: #F5C147;
+  /* Exact Figma Linear Gradient */
+  --Line-Gradient: linear-gradient(324.89deg, #1071C2 13.21%, #35A0FB 78.55%);
+}
+
+.how-its-work-section {
+  width: 100%;
+  background: var(--Light-bg);
+  padding: 100px 80px;
+  box-sizing: border-box;
+}
+
+.how-its-work-container {
+  /* max-width: 1272px; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+/* Left Section */
+.how-left-content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.how-title {
+ font-family: PlusJakartaSans;
+font-weight: 700;
+font-size: 42px;
+line-height: 55px;
+letter-spacing: 0%;
+  margin: 0px 0px 18px 0px;
+  color: var(--Dark-blue, #161D46);
+
+}
+
+.how-title span {
+color: var(--Light-Blue, #3982F6);
+
+}
+
+.how-description {
+font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+color: var(--Text, #3E4354);
+max-width: 468px;
+  margin-bottom: 18px;
+}
+
+.how-btn {
+width: 144px;
+height: 54px;
+border-radius: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: var(--Yellow, #F5C147);
+font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+color: var(--Dark-blue, #161D46);
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  border: none;
+}
+
+.how-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.how-arrow-box {
+display: flex;
+justify-content: end;
+      margin-top: -35px;
+      padding-right: 60px;
+}
+.arrr{
+    width: 178.70324379366411px;
+height: 168.49163509418233px;
+}
+/* Timeline Section Layout */
+.how-timeline-container {
+    max-width: 672px;
+  flex: 1;
+  position: relative;
+  padding-left: 50px;
+}
+
+/* Base Gray Line (Centered on Dots) */
+.timeline-line-bg {
+  position: absolute;
+  left: 14px; 
+  top: 15px;
+  bottom: 150px;
+  width: 4px;
+  background-color: #E2E8F0;
+  z-index: 1;
+  border-radius: 2px;
+}
+
+/* Active Moving Line with Exact Linear Gradient */
+.timeline-line-active {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  width: 4px;
+  background: var(--Line-Gradient);
+  z-index: 2;
+  border-radius: 2px;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Timeline Steps */
+.timeline-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  max-width: 594px;
+  z-index: 3;
+}
+
+.timeline-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Dot Icon Base */
+.step-dot {
+  position: absolute;
+  left: -52px;
+  top: 2px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+background: var(--Light-Stroke, #DFE8F1);
+  z-index: 4;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Active Dot Styling */
+.step-dot.dot-active {
+  /* background: var(--Line-Gradient); */
+  background: linear-gradient(324.89deg, #1071C2 13.21%, #35A0FB 78.55%);
+
+  /* box-shadow: 0 0 0 4px rgba(57, 130, 246, 0.15); */
+}
+
+/* Text Container */
+.step-text-content {
+  max-width: 594px;
+}
+
+.step-title {
+font-family: PlusJakartaSans;
+font-weight: 600;
+font-size: 28px;
+line-height: 38px;
+letter-spacing: 0%;
+
+color: var(--Text, #3E4354);
+  margin: 0px 0px 16px 0px;
+  transition: color 0.3s ease;
+}
+
+/* Jab active ho to title color light blue ho jae */
+.step-title.title-active {
+color: var(--Light-Blue, #3982F6);
+
+}
+
+.step-desc {
+ font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+color: var(--Text, #3E4354);
+  margin: 0; 
+  max-width: 565px;
+}
+
+@media (max-width: 992px) {
+  .how-its-work-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .how-its-work-section {
+    padding: 60px 24px;
+  }
+}

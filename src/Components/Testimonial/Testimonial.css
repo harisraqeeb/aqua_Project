@@ -1,0 +1,217 @@
+:root {
+  --White: #FFFFFF;
+  --Dark-blue: #161D46;
+  --Light-Blue: #3982F6;
+  --Text: #3E4354;
+  --Border-Color: #F0F4F8;
+}
+
+/* Main Container: Padding 80px 120px */
+.testimonial-section {
+  width: 100%;
+  background: var(--White);
+  padding: 80px 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px; /* 2 Child Gap 60px */
+  overflow: hidden;
+}
+
+/* Header */
+.testimonial-header {
+  text-align: center;
+}
+
+.testimonial-title {
+font-family: PlusJakartaSans;
+font-weight: 700;
+font-style: Bold;
+font-size: 64px;
+line-height: 75px;
+letter-spacing: 0%;
+text-align: center;
+color: var(--Dark-blue, #161D46);
+  margin: 0px 0px 12px 0px;
+}
+
+.testimonial-title span {
+color: var(--Light-Blue, #3982F6);
+
+}
+
+.testimonial-subtitle {
+ font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+color: var(--Text, #3E4354);
+  margin: 0;
+}
+
+/* 2nd Child: Cards Main Container (Max width 1272px & Gap 20px) */
+.testimonial-cards-wrapper {
+  width: 100%;
+  max-width: 1272px;
+  height: 806px; /* Fixed height for moving mask area */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+  /* Top & Bottom Fade Overlay for smooth look */
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+/* Moving Columns */
+.testimonial-col {
+  flex: 1;
+  max-width: 409.3333435058594px;
+  overflow: hidden;
+}
+
+.col-track {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Continuous Animations */
+.scroll-up .col-track {
+  animation: scrollUp 20s linear infinite;
+}
+
+.scroll-down .col-track {
+  animation: scrollDown 22s linear infinite;
+}
+
+/* Mouse Hover Par Moving Pause Ho Jayegi */
+.testimonial-cards-wrapper:hover .col-track {
+  animation-play-state: paused;
+}
+
+/* Keyframe for Upar Move Karne K Liye */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Keyframe for Niche Move Karne K Liye */
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Card Style: Exact Width 409.33px, Padding 24px, Gap 16px */
+.testimonial-card {
+  width: 100%;
+  background: #FFFFFF;
+border: 1px solid var(--Light-Stroke, #DFE8F1);
+  border-radius: 24px;
+  padding: 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+box-shadow: 0px 1px 2px 0px #00000012;
+
+}
+
+/* Author Header */
+.card-author-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Avatar: 42px * 42px */
+.card-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.author-name {
+ /* font-family: Manrope; */
+  font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: var(--Dark-blue, #161D46);
+
+  margin: 0;
+}
+
+.author-role {
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 18px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: var(--Text, #3E4354);
+
+  margin: 0;
+}
+
+/* Quote */
+.card-quote {
+ font-family: Inter;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+letter-spacing: 0px;
+vertical-align: middle;
+color: var(--Text, #3E4354);
+  margin: 0;
+}
+
+/* Stars: 20px * 20px */
+.card-stars {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.card-star-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.star-grey {
+  opacity: 0.25;
+}
+
+@media (max-width: 900px) {
+  .testimonial-section {
+    padding: 40px 20px;
+  }
+  
+  .testimonial-cards-wrapper {
+    gap: 12px;
+  }
+}

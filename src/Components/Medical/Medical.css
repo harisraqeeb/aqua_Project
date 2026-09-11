@@ -1,0 +1,231 @@
+:root {
+  --White: #FFFFFF;
+  --Dark-Blue: #161D46;
+  --Light-Blue: #3982F6;
+  --Text-Gray: #3E4354;
+  --Yellow-Badge: #F5C147;
+  --Text-Muted: #64748B;
+}
+
+/* Main Section: Padding 0px 120px 80px */
+.medical-section {
+  width: 100%;
+  background: var(--White);
+  padding: 40px 120px 80px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Section */
+.medical-header {
+  text-align: center;
+  max-width: 806px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.medical-title {
+font-family: PlusJakartaSans;
+font-weight: 700;
+font-size: 64px;
+line-height: 75px;
+letter-spacing: 0%;
+text-align: center;
+color: var(--Dark-blue, #161D46);
+  margin: 0;
+}
+
+.medical-title span {
+color: var(--Light-Blue, #3982F6);
+
+}
+
+.medical-subtitle {
+font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+max-width: 630px;
+color: var(--Text, #3E4354);
+
+  margin: 0;
+}
+
+/* Cards Wrapper: Margin Top 60px, Gap 40px */
+.medical-cards-wrapper {
+  width: 100%;
+  max-width: 1272px;
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+}
+
+/* Individual Card Item */
+.medical-card {
+  width: 397.3333435058594px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Featured Image Box: Width 397.33px, Height 250px */
+.card-image-box {
+  width: 397.3333435058594px;
+  height: 250px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.medical-card:hover .card-main-img {
+  transform: scale(1.04);
+}
+
+/* Meta Category & Date Row */
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.category-badge {
+background: linear-gradient(153.15deg, #FFD167 13.45%, #F7B826 61.55%, #F2AA03 86.89%);
+  padding: 6px 12px;
+  border-radius: 6px;
+font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 20px;
+letter-spacing: 0px;
+vertical-align: middle;
+text-transform: uppercase;
+color: var(--Dark-blue, #161D46);
+display: flex;
+align-items: center;
+justify-items: center;
+
+}
+
+.card-date {
+  font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: var(--Text, #3E4354);
+}
+
+/* Card Title */
+.card-title {
+font-family: PlusJakartaSans;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 28px;
+line-height: 38px;
+letter-spacing: 0%;
+color: var(--Black, #181818);
+padding-bottom: 20px;
+  overflow: hidden;
+}
+
+/* Author Section */
+.card-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+padding-top: 20px;
+border-top: 1px solid var(--Light-Stroke, #DFE8F1);
+
+}
+
+/* Author Avatar Icon Size: 51px * 51px */
+.author-avatar-icon {
+  width: 51px;
+  height: 51px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-names {
+font-family: PlusJakartaSans;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 30px;
+letter-spacing: 0%;
+color: var(--Black, #181818);
+
+}
+
+.author-roles {
+font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+leading-trim: NONE;
+line-height: 20px;
+letter-spacing: 0%;
+color: var(--Text, #3E4354);
+
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .medical-section {
+    padding: 0px 40px 60px;
+  }
+
+  .medical-cards-wrapper {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .medical-card {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .card-image-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .medical-section {
+    padding: 0px 20px 40px;
+  }
+
+  .medical-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .medical-cards-wrapper {
+    margin-top: 40px;
+  }
+}

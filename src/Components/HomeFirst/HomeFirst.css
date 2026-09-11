@@ -1,0 +1,728 @@
+/* =========================
+   HOME FIRST / HERO
+========================= */
+.HomeFirst_Main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.home-first{
+  width: 100%;
+  max-width: 1512px;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+justify-content: space-between;
+  padding: 80px 100px;
+  overflow: hidden;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.home-first-content {
+  max-width: 636px;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.home-first-title {
+  margin: 0;
+
+font-family: PlusJakartaSans;
+font-weight: 700;
+font-style: Bold;
+font-size: 64px;
+line-height: 75px;
+letter-spacing: 0%;
+
+}
+
+.home-first-title span {
+  color: #3982F6;
+}
+
+.home-first-description {
+  margin: 12px 0px 0px;
+color: #3E4354;
+
+ font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+
+max-width: 604px;
+}
+
+.home-first-buttons {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 32px;
+
+}
+
+
+/* =========================
+   PRIMARY BUTTON
+========================= */
+
+.home-first-btn-primary {
+  width: 280px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+
+  background: var(--Yellow, #F5C147);
+color: var(--Dark-blue, #161D46);
+
+font-family: Inter;
+font-weight: 400;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0%;
+text-align: center;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.home-first-btn-primary:hover {
+  background: #f3b82d;
+  opacity: 0.7;
+}
+
+
+/* =========================
+   SECONDARY BUTTON
+========================= */
+
+.home-first-btn-secondary {
+ width: 164px;
+height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+border-radius: 30px;
+border-width: 1px;
+border: 1px solid var(--Dark-blue, #161D46)
+
+}
+
+.home-first-btn-secondary:hover {
+  background: #f5f5f5;
+}
+
+
+/* =========================
+   RIGHT VISUAL
+========================= */
+
+.home-first-visual {
+width: 616px;
+height: 479px;
+
+
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+/* =========================
+   MAIN IMAGE
+========================= */
+
+.home-first-image-wrapper {
+  position: absolute;
+width: 462px;
+height: 479px;
+border-radius: 24px;
+border-width: 1px;
+  right: 72px;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  z-index: 3;
+}
+
+.home-first-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.arrowmain{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.jhgvhj{
+  width: 139.99999681091361px;
+height: 131.9999969931471px;
+margin-bottom: 3px;
+    margin-right: -92px;
+
+}
+
+
+
+/* =========================
+   CERTIFIED TUTORS BADGE
+========================= */
+
+.home-first-tutor-badge {
+  position: absolute;
+    top: 24px;
+    right: 20px;
+
+
+  height: 58px;
+
+  padding: 10px 18px 10px 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background: #ffffff;
+
+  border-radius: 35px;
+
+border: 1px solid var(--Light-Stroke, #DFE8F1);
+box-shadow: 0px 4px 12px 0px #BFBDBD4D;
+
+
+  z-index: 6;
+
+font-family: Inter;
+font-weight: 500;
+
+font-size: 18px;
+text-align: center;
+color: var(--Text, #3E4354);
+
+}
+
+.home-first-badge-icon {
+  width: 46px;
+  height: 46px;
+
+}
+
+
+/* =========================
+   STUDENTS BADGE
+========================= */
+
+.home-first-students-badge {
+  position: absolute;
+
+    left: -10px;
+    bottom: 32px;
+
+  width: 176px;
+  height: 132px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+  z-index: 7;
+
+  font-family: Inter, sans-serif;
+}
+.Studentscardin{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 8px;
+}
+.home-first-avatars {
+  display: flex;
+  align-items: center;
+}
+.home_first_avatars1{
+  width: 40px;
+height: 40px;
+  margin-left: -14px;
+}
+
+
+.home-first-avatars img:first-child {
+  margin-left: 0;
+}
+
+.home-first-avatar-count {
+  width: 40px;
+height: 40px;
+  margin-left: -22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+background-image: url(/public//Images/icon5.webp);
+background-position: 100px 100px;
+
+  color: #ffffff;
+
+font-family: Inter;
+font-weight: 600;
+font-size: 12px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+}
+
+.Studentscardin strong {
+ font-family: Inter;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+color: var(--Dark-blue, #161D46);
+
+}
+
+.Studentscardin span {
+font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+line-height: 18px;
+letter-spacing: 0px;
+text-align: center;
+color: var(--Text, #3E4354);
+
+}
+
+
+/* =========================
+   1200px
+========================= */
+
+@media (max-width: 1200px) {
+
+  .home-first {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .home-first-title {
+    font-size: 55px;
+  }
+
+  .home-first-description {
+    max-width: 500px;
+  }
+
+  .home-first-image-wrapper {
+    width: 380px;
+    height: 400px;
+
+    right: 35px;
+  }
+
+  .home-first-glow {
+    right: -270px;
+  }
+
+  .home-first-tutor-badge {
+    right: 0;
+  }
+
+}
+
+
+/* =========================
+   1024px
+========================= */
+
+@media (max-width: 1024px) {
+
+  .home-first {
+    min-height: 560px;
+
+    padding: 60px 45px 70px;
+  }
+
+  .home-first-content {
+    width: 50%;
+  }
+
+  .home-first-visual {
+    width: 50%;
+    height: 500px;
+  }
+
+  .home-first-title {
+    font-size: 46px;
+    letter-spacing: -1px;
+  }
+
+  .home-first-description {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  .home-first-buttons {
+    gap: 10px;
+  }
+
+  .home-first-btn-primary {
+    min-width: 215px;
+    font-size: 14px;
+  }
+
+  .home-first-btn-secondary {
+    width: 130px;
+    font-size: 14px;
+  }
+
+  .home-first-image-wrapper {
+    width: 330px;
+    height: 350px;
+
+    right: 5px;
+  }
+
+  .home-first-glow {
+    width: 600px;
+    height: 600px;
+
+    right: -250px;
+  }
+
+  .home-first-tutor-badge {
+    top: 65px;
+    right: -15px;
+
+    height: 52px;
+
+    padding-right: 15px;
+
+    font-size: 14px;
+  }
+
+  .home-first-badge-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .home-first-students-badge {
+    left: -10px;
+    bottom: 40px;
+  }
+
+  .home-first-arrow {
+    left: -25px;
+    top: 140px;
+  }
+
+}
+
+
+/* =========================
+   768px
+========================= */
+
+@media (max-width: 768px) {
+
+  .home-first {
+    min-height: auto;
+
+    padding: 70px 30px 80px;
+
+    flex-direction: column;
+
+    gap: 50px;
+  }
+
+  .home-first-content {
+    width: 100%;
+
+    text-align: center;
+  }
+
+  .home-first-title {
+    font-size: 52px;
+  }
+
+  .home-first-description {
+    max-width: 600px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .home-first-buttons {
+    justify-content: center;
+  }
+
+  .home-first-visual {
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+  }
+
+  .home-first-image-wrapper {
+    width: 380px;
+    height: 400px;
+
+    right: 50%;
+    transform: translateX(50%);
+
+    top: 30px;
+  }
+
+  .home-first-glow {
+    width: 650px;
+    height: 650px;
+
+    right: 50%;
+    transform: translateX(50%);
+
+    top: -40px;
+  }
+
+  .home-first-tutor-badge {
+    right: 40px;
+    top: 45px;
+  }
+
+  .home-first-students-badge {
+    left: 35px;
+    bottom: 40px;
+  }
+
+  .home-first-arrow {
+    left: 30px;
+    top: 125px;
+  }
+
+}
+
+
+/* =========================
+   600px
+========================= */
+
+@media (max-width: 600px) {
+
+  .home-first {
+    padding: 60px 20px 70px;
+  }
+
+  .home-first-title {
+    font-size: 44px;
+  }
+
+  .home-first-description {
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  .home-first-buttons {
+    flex-direction: column;
+  }
+
+  .home-first-btn-primary {
+    width: 254px;
+  }
+
+  .home-first-btn-secondary {
+    width: 148px;
+  }
+
+  .home-first-visual {
+    height: 440px;
+  }
+
+  .home-first-image-wrapper {
+    width: 330px;
+    height: 350px;
+  }
+
+  .home-first-tutor-badge {
+    right: 0;
+
+    transform: scale(0.9);
+    transform-origin: right center;
+  }
+
+  .home-first-students-badge {
+    left: 0;
+
+    transform: scale(0.9);
+    transform-origin: left bottom;
+  }
+
+  .home-first-arrow {
+    left: 5px;
+    top: 115px;
+
+    transform: scale(0.8) rotate(-3deg);
+  }
+
+}
+
+
+/* =========================
+   480px
+========================= */
+
+@media (max-width: 480px) {
+
+  .home-first {
+    padding: 50px 16px 60px;
+  }
+
+  .home-first-title {
+    font-size: 38px;
+    line-height: 1.12;
+  }
+
+  .home-first-description {
+    margin-top: 16px;
+
+    font-size: 13px;
+    line-height: 21px;
+  }
+
+  .home-first-buttons {
+    margin-top: 25px;
+  }
+
+  .home-first-visual {
+    height: 390px;
+  }
+
+  .home-first-image-wrapper {
+    width: 285px;
+    height: 305px;
+
+    top: 30px;
+  }
+
+  .home-first-glow {
+    width: 520px;
+    height: 520px;
+
+    top: -20px;
+  }
+
+  .home-first-tutor-badge {
+    top: 35px;
+    right: -5px;
+
+    height: 47px;
+
+    padding-right: 12px;
+
+    gap: 7px;
+
+    font-size: 12px;
+  }
+
+  .home-first-badge-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .home-first-students-badge {
+    width: 145px;
+    min-height: 105px;
+
+    left: 0;
+    bottom: 25px;
+  }
+
+  .home-first-arrow {
+    left: -5px;
+    top: 105px;
+
+    transform: scale(0.65) rotate(-3deg);
+  }
+
+}
+
+
+/* =========================
+   360px
+========================= */
+
+@media (max-width: 360px) {
+
+  .home-first {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .home-first-title {
+    font-size: 34px;
+  }
+
+  .home-first-visual {
+    height: 350px;
+  }
+
+  .home-first-image-wrapper {
+    width: 255px;
+    height: 275px;
+  }
+
+  .home-first-tutor-badge {
+    transform: scale(0.75);
+    right: -10px;
+  }
+
+  .home-first-students-badge {
+    transform: scale(0.75);
+    left: -10px;
+  }
+
+  .home-first-arrow {
+    transform: scale(0.5) rotate(-3deg);
+    left: -20px;
+  }
+
+}
