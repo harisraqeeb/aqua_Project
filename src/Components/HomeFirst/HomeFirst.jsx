@@ -17,7 +17,7 @@ const HomeFirst = () => {
           <br />
           <span>Residency</span>
         </h1>
-        <img src="/public/Images/arrow.webp" alt=" " className="jhgvhj"/>
+        <img src="/Images/arrow.webp" alt=" " className="jhgvhj"/>
         </div>
 
         <p className="home-first-description">
@@ -62,7 +62,7 @@ const HomeFirst = () => {
         {/* CERTIFIED TUTORS BADGE */}
         <div className="home-first-tutor-badge">
 
-          <img className="home-first-badge-icon" src="/public/Images/certified.webp"/>
+          <img className="home-first-badge-icon" src="/Images/certified.webp"/>
       
 
           <span>Certified Tutors</span>
@@ -75,10 +75,10 @@ const HomeFirst = () => {
 
           <div className="home-first-avatars">
 
-            <img src="/public/Images/icon1.webp" alt=""  className="home_first_avatars1"/>
-           <img src="/public/Images/icon2.webp" alt=""  className="home_first_avatars1"/>
- <img src="/public/Images/icon3.webp" alt=""  className="home_first_avatars1"/>
-  <img src="/public/Images/icon4.webp" alt=""  className="home_first_avatars1"/>
+            <img src="/Images/icon1.webp" alt=""  className="home_first_avatars1"/>
+           <img src="/Images/icon2.webp" alt=""  className="home_first_avatars1"/>
+ <img src="/Images/icon3.webp" alt=""  className="home_first_avatars1"/>
+  <img src="/Images/icon4.webp" alt=""  className="home_first_avatars1"/>
             <div className="home-first-avatar-count">
               1K
             </div>

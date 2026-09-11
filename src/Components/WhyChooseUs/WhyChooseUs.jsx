@@ -4,7 +4,7 @@ import "./WhyChooseUs.css";
 const WhyChooseUs = () => {
   const features = [
     {
-      icon: "/public/Images/f1.svg",
+      icon: "/Images/f1.svg",
       title: (
         <>
           Time-Tested
@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
       ),
     },
     {
-      icon: "/public/Images/f1.svg",
+      icon: "/Images/f1.svg",
       title: (
         <>
           Personalized Study
@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
   ];
    const features1 = [
    {
-         icon: "/public/Images/f1.svg",
+         icon: "/Images/f1.svg",
       title: (
         <>
           Student-Centered
@@ -36,7 +36,7 @@ const WhyChooseUs = () => {
       ),
     },
     {
-         icon: "/public/Images/f1.svg",
+         icon: "/Images/f1.svg",
       title: (
         <>
           Comprehensive
@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
       ),
     },
     {
-         icon: "/public/Images/f1.svg",
+         icon: "/Images/f1.svg",
       title: (
         <>
           Trusted by Aspiring

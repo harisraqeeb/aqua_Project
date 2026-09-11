@@ -4,7 +4,7 @@ import "./Testimonial.css";
 const col1Data = [
   {
     id: 1,
-    avatar: "/public/Images/p1.webp",
+    avatar: "/Images/p1.webp",
     name: "Eben Pingree",
     role: "Cofounder at Kinsome",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut",
@@ -12,7 +12,7 @@ const col1Data = [
   },
   {
     id: 2,
-    avatar: "/public/Images/p2.webp",
+    avatar: "/Images/p2.webp",
     name: "Eben Pingree",
     role: "Cofounder at Kinsome",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -20,7 +20,7 @@ const col1Data = [
   },
   {
     id: 3,
-    avatar: "/public/Images/p3.webp",
+    avatar: "/Images/p3.webp",
     name: "Eben Pingree",
     role: "Cofounder at Kinsome",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut",
@@ -31,7 +31,7 @@ const col1Data = [
 const col2Data = [
   {
     id: 4,
-    avatar: "/public/Images/p4.webp",
+    avatar: "/Images/p4.webp",
     name: "Eben Pingree",
     role: "Cofounder at Kinsome",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -39,7 +39,7 @@ const col2Data = [
   },
   {
     id: 5,
-    avatar: "/public/Images/p5.webp",
+    avatar: "/Images/p5.webp",
     name: "Eben Pingree",
     role: "Cofounder at Kinsome",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut",
@@ -47,7 +47,7 @@ const col2Data = [
   },
   {
     id: 6,
-    avatar: "/public/Images/p6.webp",
+    avatar: "/Images/p6.webp",
     name: "Eben Pingree",
     role: "Cofounder at Kinsome",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut",
@@ -58,7 +58,7 @@ const col2Data = [
 const col3Data = [
   {
     id: 7,
-    avatar: "/public/Images/p7.webp",
+    avatar: "/Images/p7.webp",
     name: "Eben Pingree",
     role: "Cofounder at Kinsome",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut",
@@ -66,7 +66,7 @@ const col3Data = [
   },
   {
     id: 8,
-    avatar: "/public/Images/p8.webp",
+    avatar: "/Images/p8.webp",
     name: "Eben Pingree",
     role: "Cofounder at Kinsome",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation",
@@ -74,7 +74,7 @@ const col3Data = [
   },
   {
     id: 9,
-    avatar: "/public/Images/p9.webp",
+    avatar: "/Images/p9.webp",
     name: "Eben Pingree",
     role: "Cofounder at Kinsome",
     quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

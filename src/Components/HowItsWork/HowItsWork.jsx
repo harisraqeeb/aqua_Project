@@ -103,7 +103,7 @@ const HowItsWork = () => {
 
           {/* Decorative Arrow SVG */}
           <div className="how-arrow-box">
-            <img src="/public/Images/sucesserror.svg" alt="arrow" className="arrr"/>
+            <img src="/Images/sucesserror.svg" alt="arrow" className="arrr"/>
         
           </div>
         </div>

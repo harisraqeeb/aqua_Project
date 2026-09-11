@@ -81,9 +81,9 @@ const Services = () => {
             >
               {/* Icon */}
               <div className="service-icon">
-                {service.type === "home" && <img src="/public/Images/s1.svg" />}
-                {service.type === "edit" && <img src="/public/Images/s2.svg" />}
-                {service.type === "document" && <img src="/public/Images/s3.svg" />}
+                {service.type === "home" && <img src="/Images/s1.svg" />}
+                {service.type === "edit" && <img src="/Images/s2.svg" />}
+                {service.type === "document" && <img src="/Images/s3.svg" />}
               </div>
 
               {/* Content */}
