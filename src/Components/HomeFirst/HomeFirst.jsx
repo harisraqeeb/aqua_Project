@@ -11,11 +11,11 @@ const HomeFirst = () => {
         <div className="arrowmain">
 
         <h1 className="home-first-title">
-          Pass <span>USMLE.</span>
-          <br />
+          Pass <span>USMLE.<br className="ghvhgv"/> </span>
+          <br className="jhbjhbj" />
           Match Your
-          <br />
-          <span>Residency</span>
+          <br className="jhbjhbj" />
+          <span> Residency</span>
         </h1>
         <img src="/Images/arrow.webp" alt=" " className="jhgvhj"/>
         </div>
