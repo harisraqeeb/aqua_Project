@@ -210,6 +210,11 @@ text-decoration-thickness: 0%;
    TABLET
 ========================= */
 
+@media (max-width: 1200px) {
+.services-cards {
+      grid-template-columns: repeat(2, 1fr);
+}
+}
 @media (max-width: 1000px) {
 
   .services {
@@ -307,26 +312,44 @@ text-decoration-thickness: 0%;
 ========================= */
 
 @media (max-width: 400px) {
+  .service-icon{
+        width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+
+  }
 
   .services {
     padding: 50px 15px;
   }
 
   .services-header h2 {
-    font-size: 34px;
+    font-size: 26px;
   }
 
   .services-header p {
-    font-size: 15px;
+    font-size: 16px;
+    margin-top: 12px;
+    max-width: 330px;
   }
 
   .service-card {
-    min-height: 340px;
-    padding: 27px 24px;
+    min-height: unset;
+    padding:  24px;
     border-radius: 20px;
   }
 
   .service-content h3 {
-    font-size: 25px;
+    font-size: 22px;
+    margin-bottom: 12px;
   }
+      .service-content p {
+        max-width: none;
+        font-size: 14px;
+    }
+    .learn-more {
+          font-size: 15px;
+          margin: 0px;
+          padding-top: 15px;
+    }
 }

@@ -5,7 +5,6 @@
 .why-choose-us {
   width: 100%;
   max-width: 1512px;
-  height: 508px;
   overflow: hidden;
   padding: 10px 120px;
 }
@@ -111,4 +110,164 @@ height: 45px;
     align-items: center;
     justify-content: end;
     margin-top: 40px;
+}
+/* Laptops & Small Desktops (1400px - 1200px) */
+@media (max-width: 1400px) {
+  .why-choose-us {
+    padding: 40px 80px;
+  }
+
+  .why-choose-us___1 {
+    gap: 40px;
+  }
+
+  .why-choose-us___2,
+  .whychooseus___lst {
+    gap: 24px;
+  }
+
+  .why-choose-card {
+    width: 280px;
+    height: 200px;
+    padding: 30px 20px;
+    gap: 18px;
+  }
+
+  .why-choose-card-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+/* Medium Laptops / Small Screens (1200px - 980px) */
+@media (max-width: 1200px) {
+  .why-choose-us {
+    padding: 40px 50px;
+  }
+
+  .why-choose-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .why-choose-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .why-choose-card {
+    width: 250px;
+    height: 190px;
+  }
+
+  .why-choose-card-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+/* Tablets (980px - 760px) */
+@media (max-width: 980px) {
+  .why-choose-us {
+    padding: 40px 30px;
+  }
+
+  .why-choose-us___1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .why-choose-description {
+    max-width: 100%;
+  }
+
+  .why-choose-us___2 {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .whychooseus___lst {
+    justify-content: center;
+    margin-top: 24px;
+            flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .why-choose-card {
+    width: 48%;
+    max-width: 320px;
+    height: 200px;
+  }
+}
+
+/* Large Mobile & Phablets (760px - 600px) */
+@media (max-width: 760px) {
+  .why-choose-us {
+    padding: 30px 20px;
+  }
+
+  .why-choose-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .why-choose-description {
+    font-size: 15px;
+    line-height: 24px;
+    margin-top: 12px;
+  }
+
+  .why-choose-us___2,
+  .whychooseus___lst {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .whychooseus___lst {
+    margin-top: 20px;
+  }
+
+  .why-choose-card {
+    width: 100%;
+    max-width: 340px;
+    height: 180px;
+    padding: 24px 20px;
+  }
+}
+
+/* Small Mobile Devices (480px & Below) */
+@media (max-width: 480px) {
+  .why-choose-us {
+    padding: 24px 16px;
+  }
+
+  .why-choose-title {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .why-choose-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .why-choose-card {
+    max-width: 100%;
+    height: 170px;
+    padding: 20px 16px;
+    gap: 14px;
+  }
+
+  .why-choose-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .why-choose-card-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

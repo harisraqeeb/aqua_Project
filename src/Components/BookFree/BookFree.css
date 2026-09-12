@@ -96,6 +96,19 @@ justify-content: center;
   box-shadow: 0px 6px 20px rgba(245, 193, 71, 0.4);
 }
 
+@media (max-width: 1445px) {
+.book-free-banner {
+  width: 100%;
+  max-width: 1240px;
+  /* Adjust image path to your banner background location */
+  background: url("/public//Images/cta1440.webp") 0% 100% / cover no-repeat, #101636;
+}
+
+}
+
+
+
+
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
   .book-free-section {
@@ -113,22 +126,50 @@ justify-content: center;
 }
 
 @media (max-width: 600px) {
+  .book-free-banner {
+  width: 100%;
+  max-width: 1240px;
+  /* Adjust image path to your banner background location */
+  background: url("/public//Images/ctamob.webp") 100% 100% / cover no-repeat, #101636;
+}
+
+
   .book-free-section {
     padding: 20px 16px 40px;
   }
 
-  .book-free-banner {
-    padding: 60px 20px;
+    .book-free-banner {
+        padding: 200px 20px;
     border-radius: 12px;
   }
 
   .book-free-title {
-    font-size: 26px;
-    line-height: 34px;
+    font-size: 30px;
+    line-height: 36px;
   }
 
   .book-free-desc {
     font-size: 13px;
     line-height: 20px;
   }
+
+  .book-free-btn {
+    width: 258px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 26px;
+  }
 }
+
+
+@media (max-width: 400px) {
+    .book-free-banner {
+              padding: 147px 10px;
+        width: 100%;
+        max-width: 1240px;
+        background: url(/public/Images/ctamob.webp) 32% 100% / cover no-repeat, #101636;
+    }
+    .book-free-section {
+        padding: 20px 10px 40px;
+    }
+  }

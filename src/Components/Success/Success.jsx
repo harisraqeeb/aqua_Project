@@ -143,6 +143,25 @@ const Success = () => {
             ))}
           </div>
 
+
+<div className="jhbjhbjhbhbjhb">
+  <div className="quote-icon1">
+            <img src="/Images/quoteicon.svg" alt="Quote" />
+          </div>
+          <div className="success-stars1">
+            {[...Array(currentItem.stars)].map((_, i) => (
+              <img
+                key={i}
+                src="/Images/star.svg"
+                alt="Star"
+                className={i === 0 ? "star" : ""}
+              />
+            ))}
+          </div>
+</div>
+
+
+
           {/* Description */}
           <p className="success-description">{currentItem.description}</p>
 

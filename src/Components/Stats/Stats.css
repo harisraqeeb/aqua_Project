@@ -70,20 +70,127 @@ color: var(--Text-2, #DFDFDF);
   background-color: #DFE8F11A;
   flex-shrink: 0;
 }
-
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .stats-wrapper {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .stat-divider {
-    width: 60px;
-    height: 1px;
+@media (max-width: 1200px) {
+  .stats-container {
+    padding: 50px 40px;
   }
 
   .stat-value {
-    font-size: 40px;
+    font-size: 36px;
+    line-height: 46px;
+  }
+
+  .stat-description {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+/* Tablets (1024px - 769px) */
+@media (max-width: 1024px) {
+  .stats-container {
+    padding: 40px 24px;
+  }
+
+  .stat-item {
+    padding: 0 10px;
+  }
+
+  .stat-value {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .stat-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .stat-divider {
+    height: 60px;
+    width: 2px;
+  }
+}
+
+/* Medium & Small Mobile Devices (768px - 481px) */
+@media (max-width: 768px) {
+  .stats-container {
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .stats-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .stat-item {
+    width: 100%;
+    max-width: 300px;
+    padding: 0;
+  }
+
+  .stat-value {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 6px;
+  }
+
+  .stat-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* Horizontal Divider on Mobile Stack */
+  .stat-divider {
+    width: 80px;
+    height: 1px;
+    background-color: rgba(223, 232, 241, 0.2);
+  }
+}
+
+/* Extra Small Mobile Screens (480px & Below) */
+@media (max-width: 480px) {
+
+  .stats-container {
+    padding: 32px 16px;
+      background-image: url("/public/Images/statsmob.webp"); 
+  }
+
+  .stats-wrapper {
+    gap: 20px;
+  }
+
+  .stat-value {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 4px;
+  }
+
+  .stat-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .stat-divider {
+    width: 50px;
+  }
+}
+
+/* Ultra-Small Devices (360px & Below) */
+@media (max-width: 360px) {
+  .stats-container {
+    padding: 24px 12px;
+  }
+
+  .stat-value {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .stat-description {
+    font-size: 13px;
+    line-height: 18px;
   }
 }

@@ -6,30 +6,28 @@
   width: 100%;
   min-height: 669px;
   background: #ffffff;
-  padding-top: 4px 100px 80px;
+  padding: 40px 100px 80px;
   box-sizing: border-box;
   overflow: hidden;
 }
-
 
 /* ================================
    TITLE
 ================================ */
 
 .success-title {
-    font-family: PlusJakartaSans;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 75px;
-    text-align: center;
-    color: var(--Dark-blue, #161D46);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  color: var(--Dark-blue, #161D46);
+  margin: 0;
 }
 
 .success-title span {
-color: var(--Light-Blue, #3982F6);
-
+  color: var(--Light-Blue, #3982F6);
 }
-
 
 /* ================================
    MAIN WRAPPER
@@ -38,13 +36,12 @@ color: var(--Light-Blue, #3982F6);
 .success-wrapper {
   position: relative;
   width: 100%;
-  height: 400px;
-  margin-top: 60px ;
+  min-height: 400px;
+  margin-top: 60px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
-
 
 /* ================================
    IMAGE
@@ -52,23 +49,20 @@ color: var(--Light-Blue, #3982F6);
 
 .success-image-box {
   position: relative;
-border-radius: 12px;
+  border-radius: 12px;
   width: 380px;
   height: 400px;
   flex-shrink: 0;
   overflow: hidden;
-border: 1px solid var(--Image-Stroke, #9FA0A4);
+  border: 1px solid var(--Image-Stroke, #9FA0A4);
 }
 
 .success-image {
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
 }
-
 
 /* ================================
    PLAY BUTTON
@@ -76,77 +70,55 @@ border: 1px solid var(--Image-Stroke, #9FA0A4);
 
 .success-play {
   position: absolute;
-
   top: 50%;
   left: 50%;
-
   width: 60px;
   height: 60px;
-
   transform: translate(-50%, -50%);
-
   border: none;
   border-radius: 50%;
-
   background: #ffffff;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
-
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
-
   padding-left: 4px;
 }
-
 
 /* ================================
    TESTIMONIAL CONTENT
 ================================ */
 
 .success-content {
-  width: 555px;
-
+  width: 100%;
+  max-width: 555px;
   margin-left: 60px;
   padding-top: 32px;
-
   box-sizing: border-box;
 }
 
-
 /* ================================
-   QUOTE
+   QUOTE & STARS
 ================================ */
 
 .quote-icon {
   width: 80px;
-height: 60px;
-
-
+  height: 60px;
   margin-bottom: 33.22px;
 }
 
-.star{
+.star {
   width: 20px;
-height: 20px;
-
-
+  height: 20px;
 }
-/* ================================
-   STARS
-================================ */
 
 .success-stars {
-
-
-display: flex;
-align-items: center;
-gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 24px;
 }
-
 
 /* ================================
    DESCRIPTION
@@ -154,20 +126,14 @@ gap: 10px;
 
 .success-description {
   margin: 0;
-
   max-width: 555px;
-
-
-font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-font-size: 18px;
-line-height: 30px;
-letter-spacing: 0%;
-color: var(--Text, #3E4354);
-
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: var(--Text, #3E4354);
 }
-
 
 /* ================================
    PERSON
@@ -179,30 +145,23 @@ color: var(--Text, #3E4354);
 
 .success-person h3 {
   margin: 0px 0px 4px;
-font-family: Inter;
-font-weight: 500;
-font-style: Medium;
-font-size: 20px;
-line-height: 30px;
-letter-spacing: 0px;
-color: var(--Dark-blue, #161D46);
-
-
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  color: var(--Dark-blue, #161D46);
 }
 
 .success-person p {
   margin: 0;
-
- font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-font-size: 18px;
-line-height: 30px;
-letter-spacing: 0%;
-color: var(--Text, #3E4354);
-
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: var(--Text, #3E4354);
 }
-
 
 /* ================================
    ARROWS
@@ -210,21 +169,18 @@ color: var(--Text, #3E4354);
 
 .success-arrow {
   position: absolute;
-
   top: 50%;
   transform: translateY(-50%);
-
   width: 64px;
   height: 64px;
-border: none;
-border-radius: 50%;
+  border: none;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
-
   padding: 0;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .success-arrow:hover {
@@ -232,11 +188,11 @@ border-radius: 50%;
 }
 
 .success-arrow-left {
-  left: 100px;
+  left: 0px;
 }
 
 .success-arrow-right {
-  right: 100px;
+  right: 0px;
 }
 
 .success-arrow-left:hover {
@@ -247,7 +203,6 @@ border-radius: 50%;
   transform: translateY(-50%) translateX(3px);
 }
 
-
 /* ================================
    DOTS
 ================================ */
@@ -256,22 +211,234 @@ border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 6px;
-
   margin-top: 40px;
 }
 
 .success-dot {
   width: 14px;
   height: 14px;
-
   border-radius: 50%;
-
   background: #D3D3D3;
+  cursor: pointer;
 }
 
 .success-dot.active {
   background: #161D46;
 }
 
+.jhbjhbjhbhbjhb{
+  display: none;
+}
+
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES
+========================================================= */
+
+/* Laptops & Small Desktops (1400px - 1025px) */
+@media (max-width: 1400px) {
+  .success-section {
+    padding: 40px 60px 60px;
+  }
+
+  .success-arrow-left {
+    left: -15px;
+    width: 47px;
+    height: 47px;
+  }
+
+  .success-arrow-right {
+    right: -15px;
+    width: 47px;
+    height: 47px;
+  }
+      .success-content {
+        margin-left: 20px;
+        padding-top: 10px;
+        max-width: 405px;
+    }
+    .success-dots {
+      margin-top: 25px;
+    }
+}
+
+/* Tablets Landscape & Small Laptops (1024px - 981px) */
+@media (max-width: 1024px) {
+  .success-title {
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  .success-wrapper {
+    margin-top: 40px;
+  }
+
+  .success-image-box {
+    width: 320px;
+    height: 360px;
+  }
+
+ 
+
+  .quote-icon {
+    width: 60px;
+    height: 45px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Tablets Portrait (980px - 761px) */
+@media (max-width: 980px) {
+  .success-section {
+    padding: 40px 30px;
+  }
+
+  .success-wrapper {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .success-content {
+    margin-left: 0;
+    margin-top: 30px;
+    padding-top: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .success-stars {
+    justify-content: center;
+  }
+
+  .success-description {
+    max-width: 100%;
+  }
+
+  .success-arrow {
+    width: 48px;
+    height: 48px;
+    top: 25%;
+    transform: none;
+  }
+    .success-arrow-left {
+          left: 115px;
+          transform: none;
+    }
+
+
+ .success-arrow-right {
+          right: 115px;
+             transform: none;
+    }
+
+
+
+  .success-arrow-left:hover,
+  .success-arrow-right:hover {
+    transform: none;
+  }
+
+  /* Wrap arrows and dots together on tablet/mobile for clean alignment */
+  .success-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .success-dots {
+    margin-top: 0;
+  }
+  .jhbjhbjhbhbjhb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .quote-icon1{
+        width: 45px;
+        height: 35px;
+  }
+  .success-stars1{
+        display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+    .quote-icon {
+      display: none;
+
+    }
+        .success-stars {
+                display: none;
+        }
+        .success-description {
+                    text-align: left;
+        }
+
+
+        .success-person h3 {
+          text-align: left;
+
+        }
+        .success-person p {
+               text-align: left;
+        }
+
+}
+
+/* Standard Mobile Devices (760px - 481px) */
+@media (max-width: 760px) {
+
+   .success-arrow-left {
+    display: none;
+   }
+    .success-arrow-right {
+    display: none;
+   }
+  .success-section {
+    padding: 0px 20px 30px 20px;
+  }
+
+  .success-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .success-image-box {
+    width: 100%;
+    max-width: 340px;
+    height: 320px;
+  }
+
+  .success-play {
+    width: 50px;
+    height: 50px;
+  }
+
+  .success-description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .success-person h3 {
+    font-size: 18px;
+  }
+
+  .success-person p {
+    font-size: 16px;
+  }
+      .success-content{
+        max-width: 338px;
+      }
+
+
+}
+
+@media (max-width: 430px) {
+    .success-title {
+        font-size: 26px;
+        line-height: 26px;
+    }
+  }
