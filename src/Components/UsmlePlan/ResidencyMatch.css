@@ -1,0 +1,189 @@
+:root {
+  --Dark-blue: #161D46;
+  --Light-Blue: #3982F6;
+  --Text: #3E4354;
+  --Image-Stroke: #9FA0A4;
+  --Light-bg: #F5FBFF;
+}
+
+/* ================================================
+   MAIN WRAPPER (Flex Layout + Light Background)
+================================================ */
+.residency-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  padding: 80px 100px;
+  width: 100%;
+  background: var(--Light-bg, #F5FBFF);
+  box-sizing: border-box;
+}
+
+/* ================================================
+   TEXT CONTENT (LEFT COLUMN)
+================================================ */
+.residency-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+/* Heading */
+.residency-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 58px;
+  line-height: 55px;
+  letter-spacing: 0%;
+  color: var(--Dark-blue, #161D46);
+  margin: 0 0 24px 0;
+}
+
+.residency-title span {
+  color: var(--Light-Blue, #3982F6);
+}
+
+/* Paragraph Text */
+.residency-text {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: var(--Text, #3E4354);
+  margin: 0 0 16px 0;
+}
+
+/* CTA Link */
+.residency-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--Text, #3E4354);
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-underline-offset: 4px;
+  cursor: pointer;
+  width: fit-content;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.residency-cta-link:hover {
+  color: var(--Light-Blue, #3982F6);
+  gap: 12px;
+}
+
+.residency-arrow-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ================================================
+   IMAGE CONTAINER (RIGHT COLUMN)
+================================================ */
+.residency-media-frame {
+  flex-shrink: 0;
+  width: 500px;
+  height: 450px;
+}
+
+.residency-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid var(--Image-Stroke, #9FA0A4);
+  box-sizing: border-box;
+  display: block;
+}
+
+/* ================================================
+   RESPONSIVE MEDIA QUERIES
+================================================ */
+
+/* Laptops & Small Desktops (<= 1200px) */
+@media (max-width: 1200px) {
+  .residency-wrapper {
+    gap: 35px;
+    padding: 60px 60px;
+  }
+
+  .residency-media-frame {
+    width: 420px;
+    height: 380px;
+  }
+
+  .residency-title {
+    font-size: 38px;
+    line-height: 42px;
+    margin-bottom: 15px;
+  }
+
+  .residency-text {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+
+  .residency-cta-link {
+    margin-top: 8px;
+  }
+}
+
+/* Tablets (<= 992px) - Content Stacked */
+@media (max-width: 992px) {
+  .residency-wrapper {
+    flex-direction: column-reverse; /* Image content ke niche aayegi */
+    gap: 30px;
+    padding: 50px 30px;
+  }
+
+  .residency-media-frame {
+    width: 100%;
+    max-width: 500px;
+    height: 360px;
+  }
+
+  .residency-info {
+    width: 100%;
+  }
+
+  .residency-title {
+    font-size: 34px;
+    line-height: 38px;
+  }
+}
+
+/* Mobile Screens (<= 480px) */
+@media (max-width: 480px) {
+  .residency-wrapper {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .residency-media-frame {
+    height: 250px;
+  }
+
+  .residency-title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  .residency-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .residency-cta-link {
+    font-size: 16px;
+  }
+}

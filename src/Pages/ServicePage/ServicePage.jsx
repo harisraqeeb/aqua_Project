@@ -4,6 +4,9 @@ import KeyBenefits from '../../Components/KeyBenefits/KeyBenefits'
 import Testimonial from '../../Components/Testimonial/Testimonial'
 import BookFree from '../../Components/BookFree/BookFree'
 import Footer from '../../Components/Footer/Footer'
+import UsmlePlan from '../../Components/UsmlePlan/UsmlePlan'
+import ResidencyMatch from '../../Components/UsmlePlan/ResidencyMatch'
+import PersonalStatement from '../../Components/UsmlePlan/PersonalStatement'
 
 
 const ServicePage = () => {
@@ -11,8 +14,9 @@ const ServicePage = () => {
     <div className="HomeFirst_Main">
         <Dreams/>
        <KeyBenefits/>
-
-
+<UsmlePlan/>
+<ResidencyMatch/>
+<PersonalStatement/>
 <Testimonial/>
        <BookFree/>
             <Footer/>
