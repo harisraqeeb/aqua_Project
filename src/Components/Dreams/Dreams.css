@@ -1,0 +1,94 @@
+/* Main Background Section */
+.DreamsMAin {
+  width: 100%;
+  /* Image path fix with dark overlay for better text contrast */
+  background-image:  url('/Images/ser1512.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}
+
+/* Content Container */
+.DreamsMAin1 {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 80px 120px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 16px;
+}
+
+/* Main Heading */
+.DreamsMAin1_P1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.2;
+  text-align: center;
+  max-width: 1028px;
+  color: var(--White, #FFFFFF);
+  margin: 0;
+}
+
+/* Subtitle / Paragraph */
+.DreamsMAin1_P2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--White, #FFFFFF);
+  max-width: 1028px;
+  margin: 0;
+}
+
+/* ================================================
+   RESPONSIVE MEDIA QUERIES
+================================================ */
+
+/* Laptops & Small Desktops (<= 1200px) */
+@media (max-width: 1200px) {
+  .DreamsMAin1 {
+    padding: 60px 60px 80px;
+  }
+
+  .DreamsMAin1_P1 {
+    font-size: 48px;
+  }
+}
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .DreamsMAin1 {
+    padding: 50px 24px 60px;
+    gap: 12px;
+  }
+
+  .DreamsMAin1_P1 {
+    font-size: 36px;
+  }
+
+  .DreamsMAin1_P2 {
+    font-size: 16px;
+  }
+}
+
+/* Mobile Screens (<= 480px) */
+@media (max-width: 480px) {
+  .DreamsMAin1 {
+    padding: 40px 16px 50px;
+  }
+
+  .DreamsMAin1_P1 {
+    font-size: 26px;
+  }
+
+  .DreamsMAin1_P2 {
+    font-size: 14px;
+  }
+}

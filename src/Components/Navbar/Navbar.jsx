@@ -1,87 +1,23 @@
-// import React, { useState } from "react";
-// import "./Navbar.css";
-
-// const Navbar = () => {
-//     const [activeLink, setActiveLink] = useState("Home");
-//   return (
-//       <div className="navbar-container">
-
-//         {/* Logo */}
-//         <a href="/" className="navbar-logo">
-//        <img src="/Images/logo1.svg" alt=""/>
-//         </a>
-
-//         {/* Navigation */}
-//      <nav className="navbar-menu">
-
-//       <a
-//         href="/"
-//         className={activeLink === "Home" ? "nav_link nav-link_active" : "nav_link"}
-//         onClick={() => setActiveLink("Home")}
-//       >
-//         Home
-//       </a>
-
-//       <a
-//         href="#about"
-//         className={activeLink === "About" ? "nav_link nav-link_active" : "nav_link"}
-//         onClick={() => setActiveLink("About")}
-//       >
-//         About
-//       </a>
-
-//       <a
-//         href="#services"
-//         className={activeLink === "Services" ? "nav_link nav-link_active" : "nav_link"}
-//         onClick={() => setActiveLink("Services")}
-//       >
-//         Services
-//       </a>
-
-//       <a
-//         href="#faq"
-//         className={activeLink === "FAQ" ? "nav_link nav-link_active" : "nav_link"}
-//         onClick={() => setActiveLink("FAQ")}
-//       >
-//         FAQ
-//       </a>
-
-//       <a
-//         href="#blog"
-//         className={activeLink === "Blog" ? "nav_link nav-link_active" : "nav_link"}
-//         onClick={() => setActiveLink("Blog")}
-//       >
-//         Blog
-//       </a>
-
-//     </nav>
-  
-
-//         {/* CTA */}
-//         <a href="#cta" className="navbar-cta">
-//           CTA here
-//         </a>
-
-//       </div>
-//   );
-// };
-
-// export default Navbar;
-
 import React, { useState } from "react";
 import {
   Box,
   Button,
   Drawer,
   IconButton,
-  Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-const Navbar = () => {
+// Added isDarkBg and darkLogoSrc props
+const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
   const [activeLink, setActiveLink] = useState("Home");
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // Dynamic colors & logo selection based on background
+  const textColor = isDarkBg ? "#FFFFFF" : "#3E4354";
+  const activeTextColor = isDarkBg ? "#F5C147" : "#161D46";
+  const iconColor = isDarkBg ? "#FFFFFF" : "#161D46";
+  const currentLogo = isDarkBg && darkLogoSrc ? darkLogoSrc : "/Images/logo1.svg";
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -104,8 +40,7 @@ const Navbar = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        boxShadow: "0px 2px 8px 0px #7C787833",
-        background: "#FFFFFF",
+        boxShadow: isDarkBg ? "none" : "0px 2px 8px 0px #7C787833",
         boxSizing: "border-box",
 
         "@media (max-width: 1100px)": {
@@ -134,12 +69,13 @@ const Navbar = () => {
       >
         <Box
           component="img"
-          src="/Images/logo1.svg"
-          alt=""
+          src={currentLogo}
+          alt="Logo"
           sx={{
             width: "159px",
             height: "30px",
             display: "block",
+            objectFit: "contain",
           }}
         />
       </Box>
@@ -168,7 +104,7 @@ const Navbar = () => {
               onClick={() => handleLinkClick(link.name)}
               sx={{
                 padding: "8px 18px",
-                color: isActive ? "#161D46" : "#3E4354",
+                color: isActive ? activeTextColor : textColor,
                 fontFamily: "Inter",
                 fontWeight: 400,
                 fontSize: "16px",
@@ -248,7 +184,7 @@ const Navbar = () => {
         onClick={() => setMobileOpen(true)}
         sx={{
           display: "none",
-          color: "#161D46",
+          color: iconColor,
           padding: "6px",
 
           "@media (max-width: 768px)": {
