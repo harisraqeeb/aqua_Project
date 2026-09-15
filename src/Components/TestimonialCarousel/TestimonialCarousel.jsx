@@ -22,7 +22,7 @@ const clientData = [
     id: 3,
     name: "Drew",
     company: "Aqua Splash Pools",
-    image: "/Images/Video.png",
+    image: "/Images/c2.webp",
     video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     rating: 5,
   },

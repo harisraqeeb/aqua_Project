@@ -11,7 +11,7 @@ const successData = [
     name: "Adam Rae",
     role: "CEO of UrbanScape Ventures",
     // Ek testing video link:
-    videoUrl: "https://www.istockphoto.com/video/trail-in-fresh-green-forest-gm1468836753-500244195?utm_source=pixabay&utm_medium=affiliate&utm_campaign=sponsored_video&utm_content=adp_topbanner_media&utm_term=path+forest",
+    videoUrl: "https://www.instagram.com/reel/DdLNvZ-iukp/",
   },
   {
     id: 2,

@@ -2,7 +2,7 @@
 .DreamsMAin {
   width: 100%;
   /* Image path fix with dark overlay for better text contrast */
-  background-image:  url('/Images/ser1512.webp');
+  background-image: url('/Images/ser1512q.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -81,8 +81,9 @@
 /* Mobile Screens (<= 480px) */
 @media (max-width: 480px) {
   .DreamsMAin {
-  background-image:  url('/Images/mob.webp');
+    background-image: url('/Images/mobq.webp');
   }
+
   .DreamsMAin1 {
     padding: 40px 16px 50px;
   }
