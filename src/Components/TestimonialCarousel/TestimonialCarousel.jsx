@@ -7,7 +7,7 @@ const clientData = [
     name: "Steve",
     company: "Steve's HVAC Crew",
     image: "/Images/c1.webp",
-    video: "/Videos/v1.mp4", // Apna video path yahan dein
+    video: "/Images/11.mp4",
     rating: 5,
   },
   {
@@ -15,7 +15,7 @@ const clientData = [
     name: "Olivia",
     company: "Sunny Days Landscaping",
     image: "/Images/c2.webp",
-    video: "/Videos/v2.mp4",
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
     rating: 5,
   },
   {
@@ -23,7 +23,7 @@ const clientData = [
     name: "Drew",
     company: "Aqua Splash Pools",
     image: "/Images/Video.png",
-    video: "/Videos/v3.mp4",
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
     rating: 5,
   },
   {
@@ -31,7 +31,7 @@ const clientData = [
     name: "Luka",
     company: "Mighty Roofers",
     image: "/Images/c3.webp",
-    video: "/Videos/v4.mp4",
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
     rating: 5,
   },
   {
@@ -39,14 +39,15 @@ const clientData = [
     name: "Emily",
     company: "Gleam Cleaners",
     image: "/Images/c4.webp",
-    video: "/Videos/v5.mp4",
+    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
     rating: 5,
   },
 ];
 
 const TestimonialCarousel = () => {
-  const [activeIndex, setActiveIndex] = useState(2); // Center card (Drew)
-  const [isPlaying, setIsPlaying] = useState(false);  // Video playing state
+  const [activeIndex, setActiveIndex] = useState(2);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const handlePrev = () => {
     setIsPlaying(false);
@@ -65,6 +66,11 @@ const TestimonialCarousel = () => {
     }
   };
 
+  const handleExpandClick = (e) => {
+    e.stopPropagation(); // Event bubbling stop karein
+    setIsFullscreen(true);
+  };
+
   const getCardClass = (index) => {
     const diff = index - activeIndex;
 
@@ -75,6 +81,8 @@ const TestimonialCarousel = () => {
     if (diff === 2 || diff === -(clientData.length - 2)) return "card-right-2";
     return "card-hidden";
   };
+
+  const currentClient = clientData[activeIndex];
 
   return (
     <section className="client-carousel-wrapper">
@@ -93,7 +101,7 @@ const TestimonialCarousel = () => {
               className={`carousel-card ${cardClass}`}
               onClick={() => handleCardClick(index)}
             >
-              {/* Media Swap Logic: Center Card & Playing State */}
+              {/* Media Swap Logic */}
               {isCenter && isPlaying ? (
                 <video
                   src={client.video}
@@ -110,16 +118,19 @@ const TestimonialCarousel = () => {
                 />
               )}
 
-              {/* Overlay elements tabhi dikhenge jab video play na ho rahi ho */}
+              {/* Overlay elements */}
               {(!isCenter || !isPlaying) && (
                 <div className="card-overlay">
-                  {/* Top Right Expand Icon for Center Card */}
+                  {/* Top Right Expand Icon */}
                   {isCenter && (
-                    <button className="top-right-icon" aria-label="Expand">
-                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2">
-                        <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
-                      </svg>
-                    </button>
+                    <div
+                      className="top-right-icon"
+                      onClick={handleExpandClick}
+                      role="button"
+                      tabIndex={0}
+                    >
+                      <img src="/Images/expendicon.svg" alt="Expand Video" />
+                    </div>
                   )}
 
                   {isCenter ? (
@@ -133,9 +144,7 @@ const TestimonialCarousel = () => {
                           setIsPlaying(true);
                         }}
                       >
-                        <svg width="22" height="22" viewBox="0 0 24 24" fill="#161D46">
-                          <polygon points="8,5 19,12 8,19" />
-                        </svg>
+                        <img src="/Images/playybtn.svg" alt="Play" />
                       </button>
 
                       {/* Card Info */}
@@ -173,17 +182,30 @@ const TestimonialCarousel = () => {
       {/* Controls */}
       <div className="carousel-controls">
         <button className="nav-arrow" onClick={handlePrev} aria-label="Previous">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#161D46" strokeWidth="2.5">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
+          <img src="/Images/arrowleftt.svg" alt="Previous" />
         </button>
 
         <button className="nav-arrow" onClick={handleNext} aria-label="Next">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#161D46" strokeWidth="2.5">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
+          <img src="/Images/arrowrightt.svg" alt="Next" />
         </button>
       </div>
+
+      {/* Fullscreen Video Modal View */}
+      {isFullscreen && (
+        <div className="video-modal-overlay" onClick={() => setIsFullscreen(false)}>
+          <div className="video-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-modal-btn" onClick={() => setIsFullscreen(false)}>
+              &times;
+            </button>
+            <video
+              src={currentClient.video}
+              controls
+              autoPlay
+              className="fullscreen-video"
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 };
