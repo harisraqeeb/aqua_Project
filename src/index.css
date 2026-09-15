@@ -11,11 +11,46 @@ p {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root, .page-zoom-wrapper {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Responsive Screen Overrides for Scroll Animations */
+@media (max-width: 768px) {
+  .zoom-in-left,
+  .slide-left,
+  .fade-left,
+  .zoom-in-right,
+  .slide-right,
+  .fade-right,
+  .zoom-in-up,
+  .slide-up {
+    transform: translateY(25px) scale(0.96);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .zoom-in-left.visible,
+  .slide-left.visible,
+  .fade-left.visible,
+  .zoom-in-right.visible,
+  .slide-right.visible,
+  .fade-right.visible,
+  .zoom-in-up.visible,
+  .slide-up.visible {
+    transform: translateY(0) scale(1);
+  }
 }
 
 img {
