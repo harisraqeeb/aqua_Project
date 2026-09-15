@@ -6,7 +6,7 @@ const HomeFirst = () => {
     <section className="home-first">
 
       {/* LEFT CONTENT */}
-      <div className="home-first-content">
+      <div className="home-first-content zoom-in-left">
 
         <div className="arrowmain">
 
@@ -43,7 +43,7 @@ const HomeFirst = () => {
 
 
       {/* RIGHT IMAGE AREA */}
-      <div className="home-first-visual">
+      <div className="home-first-visual zoom-in-right">
 
      
       

@@ -61,7 +61,7 @@ const ClinicalMastery = () => {
               className={`clm-row-item ${isEven ? 'clm-row-reverse' : ''}`}
             >
               {/* Text Side (Gap between title & paragraphs) */}
-              <div className="clm-text-content">
+              <div className={`clm-text-content ${isEven ? 'zoom-in-right' : 'zoom-in-left'}`}>
                 <h2 className="clm-item-title">
                   {titleParts[0]}
                   <span className="clm-highlight-text">{item.highlightWord}</span>
@@ -77,7 +77,7 @@ const ClinicalMastery = () => {
               </div>
 
               {/* Image Side */}
-              <div className="clm-image-wrapper">
+              <div className={`clm-image-wrapper ${isEven ? 'zoom-in-left' : 'zoom-in-right'}`}>
                 <img
                   src={item.image}
                   alt={item.title}

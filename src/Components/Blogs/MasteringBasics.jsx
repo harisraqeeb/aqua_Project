@@ -62,7 +62,7 @@ const MasteringBasics = () => {
               className={`mtb-row-item ${isEven ? 'mtb-row-reverse' : ''}`}
             >
               {/* Text Side (Gap 60px between inner items via flex column gap) */}
-              <div className="mtb-text-content">
+              <div className={`mtb-text-content ${isEven ? 'zoom-in-right' : 'zoom-in-left'}`}>
                 <h2 className="mtb-item-title">
                   {titleParts[0]}
                   <span className="mtb-highlight-text">{item.highlightWord}</span>
@@ -78,7 +78,7 @@ const MasteringBasics = () => {
               </div>
 
               {/* Image Side */}
-              <div className="mtb-image-wrapper">
+              <div className={`mtb-image-wrapper ${isEven ? 'zoom-in-left' : 'zoom-in-right'}`}>
                 <img
                   src={item.image}
                   alt={item.title}

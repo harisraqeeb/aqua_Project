@@ -36,8 +36,10 @@ const Consultation = () => {
       </h2>
 
       <div className="cst-steps-container">
-        {stepsData.map((item, index) => (
-          <div key={item.step} className="cst-step-card-wrapper">
+        {stepsData.map((item, index) => {
+          const animClass = index % 2 === 0 ? "zoom-in-left" : "zoom-in-right";
+          return (
+            <div key={item.step} className={`cst-step-card-wrapper ${animClass}`}>
             <div className="cst-step-card">
               <div className="cst-image-container">
                 <img src={item.image} alt={item.title} className="cst-card-img" />
@@ -58,7 +60,8 @@ const Consultation = () => {
               </div>
             )}
           </div>
-        ))}
+        );
+      })}
       </div>
     </section>
   );

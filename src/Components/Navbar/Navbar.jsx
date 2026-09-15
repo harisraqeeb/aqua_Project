@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   Box,
   Button,
@@ -10,8 +11,9 @@ import CloseIcon from "@mui/icons-material/Close";
 
 // Added isDarkBg and darkLogoSrc props
 const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
-  const [activeLink, setActiveLink] = useState("Home");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   // Dynamic colors & logo selection based on background
   const textColor = isDarkBg ? "#FFFFFF" : "#3E4354";
@@ -20,16 +22,80 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
   const currentLogo = isDarkBg && darkLogoSrc ? darkLogoSrc : "/Images/logo1.svg";
 
   const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
-    { name: "Services", href: "#services" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Blog", href: "#blog" },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/ServicePage" },
+    { name: "Services", path: "/ServiceSuccess" },
+    { name: "FAQ", path: "#faq" },
+    { name: "Blog", path: "/Blogs" },
   ];
 
-  const handleLinkClick = (name) => {
-    setActiveLink(name);
+  const getIsActive = (linkName) => {
+    if (linkName === "FAQ") {
+      return location.hash === "#faq";
+    }
+    if (linkName === "About") {
+      return location.pathname === "/ServicePage";
+    }
+    if (linkName === "Services") {
+      return location.pathname === "/ServiceSuccess";
+    }
+    if (linkName === "Blog") {
+      return location.pathname === "/Blogs";
+    }
+    if (linkName === "Home") {
+      return (location.pathname === "/" || location.pathname === "") && location.hash !== "#faq";
+    }
+    return false;
+  };
+
+  const handleLinkClick = (e, link) => {
+    e.preventDefault();
     setMobileOpen(false);
+
+    if (link.name === "Home") {
+      if (location.pathname === "/" && !location.hash) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        navigate("/");
+      }
+    } else if (link.name === "About") {
+      if (location.pathname === "/ServicePage") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        navigate("/ServicePage");
+      }
+    } else if (link.name === "Services") {
+      if (location.pathname === "/ServiceSuccess") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        navigate("/ServiceSuccess");
+      }
+    } else if (link.name === "Blog") {
+      if (location.pathname === "/Blogs") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        navigate("/Blogs");
+      }
+    } else if (link.name === "FAQ") {
+      const faqElement = document.getElementById("faq");
+      if (faqElement) {
+        faqElement.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", "#faq");
+      } else {
+        navigate("/#faq");
+      }
+    }
+  };
+
+  const handleCtaClick = (e) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    const ctaElement = document.getElementById("cta");
+    if (ctaElement) {
+      ctaElement.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/#cta");
+    }
   };
 
   return (
@@ -60,11 +126,16 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
       <Box
         component="a"
         href="/"
+        onClick={(e) => {
+          e.preventDefault();
+          navigate("/");
+        }}
         sx={{
           width: "159px",
           height: "30px",
           display: "block",
           flexShrink: 0,
+          cursor: "pointer",
         }}
       >
         <Box
@@ -94,14 +165,14 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
         }}
       >
         {navLinks.map((link) => {
-          const isActive = activeLink === link.name;
+          const isActive = getIsActive(link.name);
 
           return (
             <Box
               key={link.name}
               component="a"
-              href={link.href}
-              onClick={() => handleLinkClick(link.name)}
+              href={link.path}
+              onClick={(e) => handleLinkClick(e, link)}
               sx={{
                 padding: "8px 18px",
                 color: isActive ? activeTextColor : textColor,
@@ -115,9 +186,11 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
                 textDecoration: "none",
                 position: "relative",
                 whiteSpace: "nowrap",
+                transition: "color 0.25s ease, transform 0.25s ease",
 
                 "&:hover": {
                   color: "#F5C147",
+                  transform: "scale(1.05)",
                 },
 
                 ...(isActive && {
@@ -144,6 +217,7 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
       <Button
         component="a"
         href="#cta"
+        onClick={handleCtaClick}
         sx={{
           width: "144px",
           height: "54px",
@@ -162,13 +236,13 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
           textAlign: "center",
           textTransform: "none",
           cursor: "pointer",
-          transition: "background 0.2s ease, transform 0.2s ease",
+          transition: "background 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease",
           boxShadow: "none",
 
           "&:hover": {
             background: "#f3b82d",
-            transform: "translateY(-1px)",
-            boxShadow: "none",
+            transform: "translateY(-2px) scale(1.04)",
+            boxShadow: "0 6px 16px rgba(245, 193, 71, 0.3)",
           },
 
           "@media (max-width: 768px)": {
@@ -236,14 +310,14 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
           }}
         >
           {navLinks.map((link) => {
-            const isActive = activeLink === link.name;
+            const isActive = getIsActive(link.name);
 
             return (
               <Box
                 key={link.name}
                 component="a"
-                href={link.href}
-                onClick={() => handleLinkClick(link.name)}
+                href={link.path}
+                onClick={(e) => handleLinkClick(e, link)}
                 sx={{
                   padding: "12px 18px",
                   color: isActive ? "#161D46" : "#3E4354",
@@ -255,9 +329,11 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
                   cursor: "pointer",
                   textDecoration: "none",
                   position: "relative",
+                  transition: "color 0.25s ease, transform 0.25s ease",
 
                   "&:hover": {
                     color: "#F5C147",
+                    transform: "translateX(4px)",
                   },
 
                   ...(isActive && {
@@ -283,7 +359,7 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
         <Button
           component="a"
           href="#cta"
-          onClick={() => setMobileOpen(false)}
+          onClick={handleCtaClick}
           sx={{
             width: "144px",
             height: "54px",
@@ -300,9 +376,11 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
             lineHeight: "30px",
             textTransform: "none",
             boxShadow: "none",
+            transition: "background 0.3s ease, transform 0.3s ease",
 
             "&:hover": {
               background: "#f3b82d",
+              transform: "scale(1.03)",
               boxShadow: "none",
             },
           }}

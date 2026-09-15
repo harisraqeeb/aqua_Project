@@ -17,7 +17,7 @@ const Boost = () => {
       {/* Second Div: Content & Image Grid (Gap 80px) */}
       <div className="bst-content-container">
         {/* Left Side: Image */}
-        <div className="bst-image-wrapper">
+        <div className="bst-image-wrapper zoom-in-left">
           <img
             src="/Images/Boost1.webp"
             alt="Residency Application Boost"
@@ -26,7 +26,7 @@ const Boost = () => {
         </div>
 
         {/* Right Side: 2x2 Cards Grid (Width 662px, Height 538px, Gap 24px) */}
-        <div className="bst-cards-grid">
+        <div className="bst-cards-grid zoom-in-right">
           {/* Card 1 */}
           <div className="bst-card">
             <img src="/Images/Boost2.svg" alt="Icon" className="bst-card-icon" />

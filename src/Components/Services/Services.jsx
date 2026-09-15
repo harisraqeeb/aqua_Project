@@ -72,34 +72,37 @@ const Services = () => {
 
         {/* Cards */}
         <div className="services-cards">
-          {servicesData.map((service) => (
-            <div
-              className={`service-card ${
-                service.id === 2 ? "active-card" : ""
-              }`}
-              key={service.id}
-            >
-              {/* Icon */}
-              <div className="service-icon">
-                {service.type === "home" && <img src="/Images/s1.svg" />}
-                {service.type === "edit" && <img src="/Images/s2.svg" />}
-                {service.type === "document" && <img src="/Images/s3.svg" />}
+          {servicesData.map((service, idx) => {
+            const animClass = idx === 0 ? "zoom-in-left" : idx === 1 ? "zoom-in-up" : "zoom-in-right";
+            return (
+              <div
+                className={`service-card ${animClass} ${
+                  service.id === 2 ? "active-card" : ""
+                }`}
+                key={service.id}
+              >
+                {/* Icon */}
+                <div className="service-icon">
+                  {service.type === "home" && <img src="/Images/s1.svg" alt="" />}
+                  {service.type === "edit" && <img src="/Images/s2.svg" alt="" />}
+                  {service.type === "document" && <img src="/Images/s3.svg" alt="" />}
+                </div>
+
+                {/* Content */}
+                <div className="service-content">
+                  <h3>{service.title}</h3>
+
+                  <p>{service.description}</p>
+                </div>
+
+                {/* Learn More */}
+                <a href="#learn-more" className="learn-more">
+                  <span>Learn More</span>
+                  <ArrowIcon />
+                </a>
               </div>
-
-              {/* Content */}
-              <div className="service-content">
-                <h3>{service.title}</h3>
-
-                <p>{service.description}</p>
-              </div>
-
-              {/* Learn More */}
-              <a href="#learn-more" className="learn-more">
-                <span>Learn More</span>
-                <ArrowIcon />
-              </a>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
      

@@ -3,7 +3,7 @@ import "./BookFree.css";
 
 const BookFree = () => {
   return (
-    <section className="book-free-section">
+    <section className="book-free-section" id="cta">
       <div className="book-free-banner">
         <h2 className="book-free-title">
           Take the First Step Toward <span>Success</span>

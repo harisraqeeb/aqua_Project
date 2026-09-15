@@ -61,7 +61,7 @@ const WhyChooseUs = () => {
   return (
     <section className="why-choose-us">
       {/* LEFT CONTENT */}
-      <div className="why-choose-us___1">
+      <div className="why-choose-us___1 zoom-in-left">
         <div className="why-choose-content">
           <h2 className="why-choose-title">
             The USMLE <span>Advantage</span>
@@ -90,7 +90,7 @@ const WhyChooseUs = () => {
 
       </div>
 
-<div className="whychooseus___lst">
+<div className="whychooseus___lst zoom-in-right">
 
 
                 {features1.map((feature, index) => (

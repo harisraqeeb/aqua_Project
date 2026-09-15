@@ -128,3 +128,166 @@ select {
   src: url("/public/Fonts/PlusJakartaSans-Bold.ttf") format("truetype");
   font-weight: 700;
 }
+
+/* ==========================================
+   ZOOM & SCROLL ANIMATIONS SYSTEM
+   ========================================== */
+
+/* Zoom / Slide In From Left */
+.zoom-in-left,
+.slide-left,
+.fade-left {
+  opacity: 0;
+  transform: translateX(-70px) scale(0.92);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.zoom-in-left.visible,
+.slide-left.visible,
+.fade-left.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Zoom / Slide In From Right */
+.zoom-in-right,
+.slide-right,
+.fade-right {
+  opacity: 0;
+  transform: translateX(70px) scale(0.92);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.zoom-in-right.visible,
+.slide-right.visible,
+.fade-right.visible {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
+
+/* Zoom / Slide In Up */
+.zoom-in-up,
+.slide-up {
+  opacity: 0;
+  transform: translateY(60px) scale(0.92);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.zoom-in-up.visible,
+.slide-up.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Zoom In Scroll Transition */
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.zoom-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Zoom Out Scroll Transition */
+.zoom-out {
+  opacity: 0;
+  transform: scale(1.15);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.zoom-out.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Fade Zoom Transition */
+.fade-zoom {
+  opacity: 0;
+  transform: translateY(30px) scale(0.92);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.fade-zoom.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Page Zoom Transition */
+.page-zoom-wrapper {
+  animation: pageZoomIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Stagger Delays for Grid Items */
+.service-card:nth-of-type(1), .why-choose-card:nth-of-type(1) { transition-delay: 0.05s; }
+.service-card:nth-of-type(2), .why-choose-card:nth-of-type(2) { transition-delay: 0.15s; }
+.service-card:nth-of-type(3), .why-choose-card:nth-of-type(3) { transition-delay: 0.25s; }
+
+/* Interactive Hover Zoom Animations */
+.hover-zoom,
+.service-card,
+.why-choose-card,
+.faq-item,
+.home-first-btn-primary,
+.home-first-btn-secondary,
+.faq-cta-btn,
+.book-free-btn {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.3s ease,
+              color 0.3s ease;
+}
+
+.hover-zoom:hover,
+.service-card:hover,
+.why-choose-card:hover {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.home-first-btn-primary:hover,
+.home-first-btn-secondary:hover,
+.faq-cta-btn:hover,
+.book-free-btn:hover {
+  transform: translateY(-2px) scale(1.04);
+}
+
+.home-first-image-wrapper {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.home-first-image-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.home-first-tutor-badge,
+.home-first-students-badge {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.home-first-tutor-badge:hover,
+.home-first-students-badge:hover {
+  transform: scale(1.06);
+}

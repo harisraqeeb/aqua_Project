@@ -4,34 +4,34 @@ import "./Success.css";
 const successData = [
   {
     id: 1,
-    image: "/success-person.png", // Agar file public folder mein hai, toh use '/success-person.png'
+    image: "/Images/adam.png", // Agar file public folder mein hai, toh use '/success-person.png'
     stars: 5,
     description:
       "Workhorse Growth Partners transformed our digital presence and helped us achieve record growth. Workhorse Growth Partners transformed our digital presence and helped us achieve record growth.",
     name: "Adam Rae",
     role: "CEO of UrbanScape Ventures",
     // Ek testing video link:
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", 
+    videoUrl: "https://www.istockphoto.com/video/trail-in-fresh-green-forest-gm1468836753-500244195?utm_source=pixabay&utm_medium=affiliate&utm_campaign=sponsored_video&utm_content=adp_topbanner_media&utm_term=path+forest",
   },
   {
     id: 2,
-    image: "/success-person.png", // Replace with different images for other stories if needed
+    image: "/Images/adam.png", // Replace with different images for other stories if needed
     stars: 5,
     description:
       "Their strategic insight and dedication completely changed our customer acquisition model. Highly recommended team!",
     name: "Sarah Jenkins",
     role: "CMO at TechPulse",
-    videoUrl: "https://www.w3schools.com/html/movie.mp4", 
+    videoUrl: "https://www.w3schools.com/html/movie.mp4",
   },
   {
     id: 3,
-    image: "/success-person.png",
+    image: "/Images/adam.png",
     stars: 5,
     description:
       "Exceptional results! Our revenue jumped by 40% in just six months of working with Workhorse Growth Partners.",
     name: "Michael Chen",
     role: "Founder & Director of Apex Global",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4", 
+    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
 ];
 
@@ -144,21 +144,21 @@ const Success = () => {
           </div>
 
 
-<div className="jhbjhbjhbhbjhb">
-  <div className="quote-icon1">
-            <img src="/Images/quoteicon.svg" alt="Quote" />
+          <div className="jhbjhbjhbhbjhb">
+            <div className="quote-icon1">
+              <img src="/Images/quoteicon.svg" alt="Quote" />
+            </div>
+            <div className="success-stars1">
+              {[...Array(currentItem.stars)].map((_, i) => (
+                <img
+                  key={i}
+                  src="/Images/star.svg"
+                  alt="Star"
+                  className={i === 0 ? "star" : ""}
+                />
+              ))}
+            </div>
           </div>
-          <div className="success-stars1">
-            {[...Array(currentItem.stars)].map((_, i) => (
-              <img
-                key={i}
-                src="/Images/star.svg"
-                alt="Star"
-                className={i === 0 ? "star" : ""}
-              />
-            ))}
-          </div>
-</div>
 
 
 
@@ -186,9 +186,8 @@ const Success = () => {
         {successData.map((_, index) => (
           <span
             key={index}
-            className={`success-dot ${
-              index === currentIndex ? "active" : ""
-            }`}
+            className={`success-dot ${index === currentIndex ? "active" : ""
+              }`}
             onClick={() => setCurrentIndex(index)}
             style={{ cursor: "pointer" }}
           ></span>

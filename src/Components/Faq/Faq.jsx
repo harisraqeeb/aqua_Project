@@ -42,11 +42,11 @@ const Faq = () => {
   };
 
   return (
-    <section className="faq-section">
+    <section className="faq-section" id="faq">
       <div className="faq-container">
         
         {/* Left Section */}
-        <div className="faq-left">
+        <div className="faq-left zoom-in-left">
           <h2 className="faq-title">
             Got Questions? <br />
             We’ve Got <span>Answers</span>
@@ -58,7 +58,7 @@ const Faq = () => {
         </div>
 
         {/* Right Section */}
-        <div className="faq-right">
+        <div className="faq-right zoom-in-right">
           {faqData.map((item) => {
             const isOpen = openId === item.id;
             return (
