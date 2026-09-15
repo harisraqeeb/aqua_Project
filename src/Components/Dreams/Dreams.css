@@ -80,6 +80,9 @@
 
 /* Mobile Screens (<= 480px) */
 @media (max-width: 480px) {
+  .DreamsMAin {
+  background-image:  url('/Images/mob.webp');
+  }
   .DreamsMAin1 {
     padding: 40px 16px 50px;
   }

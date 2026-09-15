@@ -7,6 +7,7 @@ import Footer from '../../Components/Footer/Footer'
 import UsmlePlan from '../../Components/UsmlePlan/UsmlePlan'
 import ResidencyMatch from '../../Components/UsmlePlan/ResidencyMatch'
 import PersonalStatement from '../../Components/UsmlePlan/PersonalStatement'
+import TestimonialCarousel from '../../Components/TestimonialCarousel/TestimonialCarousel'
 
 
 const ServicePage = () => {
@@ -17,6 +18,7 @@ const ServicePage = () => {
 <UsmlePlan/>
 <ResidencyMatch/>
 <PersonalStatement/>
+<TestimonialCarousel/>
 <Testimonial/>
        <BookFree/>
             <Footer/>
