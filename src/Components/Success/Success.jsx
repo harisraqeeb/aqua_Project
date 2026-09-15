@@ -4,7 +4,7 @@ import "./Success.css";
 const successData = [
   {
     id: 1,
-    image: "/Images/adam.png", // Agar file public folder mein hai, toh use '/success-person.png'
+    image: "/Images/adam.webp", // Agar file public folder mein hai, toh use '/success-person.png'
     stars: 5,
     description:
       "Workhorse Growth Partners transformed our digital presence and helped us achieve record growth. Workhorse Growth Partners transformed our digital presence and helped us achieve record growth.",
@@ -15,7 +15,7 @@ const successData = [
   },
   {
     id: 2,
-    image: "/Images/adam.png", // Replace with different images for other stories if needed
+    image: "/Images/adam.webp", // Replace with different images for other stories if needed
     stars: 5,
     description:
       "Their strategic insight and dedication completely changed our customer acquisition model. Highly recommended team!",
@@ -25,7 +25,7 @@ const successData = [
   },
   {
     id: 3,
-    image: "/Images/adam.png",
+    image: "/Images/adam.webp",
     stars: 5,
     description:
       "Exceptional results! Our revenue jumped by 40% in just six months of working with Workhorse Growth Partners.",
