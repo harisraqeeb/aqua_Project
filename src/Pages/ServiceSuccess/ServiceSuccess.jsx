@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
 import Personalizedguide from '../../Components/Personalizedguide/Personalizedguide'
 import Boost from '../../Components/Personalizedguide/Boost'
+import Consultation from '../../Components/Personalizedguide/Consultation'
 
 const ServiceSuccess = () => {
   return (
@@ -9,6 +10,7 @@ const ServiceSuccess = () => {
        <Navbar/>
        <Personalizedguide/>
        <Boost/>
+       <Consultation/>
       </div>
   )
 }
