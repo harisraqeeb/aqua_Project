@@ -1,0 +1,288 @@
+:root {
+  --Dark-blue: #161D46;
+  --Light-Blue: #3982F6;
+  --Text: #3E4354;
+  --White: #FFFFFF;
+  --Image-Stroke: #9FA0A4;
+  --Card-Shadow: rgba(124, 120, 120, 0.2);
+}
+
+/* ================================================
+   MAIN SECTION CONTAINER
+================================================ */
+.bst-section-wrapper {
+  background: #FFFFFF;
+  padding: 80px 120px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ================================================
+   FIRST DIV: TEXT SECTION (GAP 80px)
+================================================ */
+.bst-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 1272px;
+  margin-bottom: 80px;
+}
+
+.bst-main-heading {
+  font-family: 'PlusJakartaSans';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  letter-spacing: -1px;
+  color: var(--Dark-blue, #161D46);
+  max-width: 530px;
+  margin: 0;
+}
+
+.bst-highlight-text {
+  color: var(--Light-Blue, #3982F6);
+}
+
+.bst-header-description {
+  font-family: 'PlusJakartaSans';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: bottom;
+  color: var(--Text, #3E4354);
+  max-width: 662px;
+  margin: 0;
+}
+
+/* ================================================
+   SECOND DIV: CONTENT & IMAGE GRID (GAP 80px)
+================================================ */
+.bst-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 1272px;
+}
+
+/* LEFT SIDE: IMAGE */
+.bst-image-wrapper {
+  width: 530px;
+  height: 538px;
+  flex-shrink: 0;
+}
+
+.bst-feature-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 1px solid var(--Image-Stroke, #9FA0A4);
+  box-sizing: border-box;
+  display: block;
+}
+
+/* RIGHT SIDE: CARDS GRID CONTAINER */
+.bst-cards-grid {
+  width: 662px;
+  height: 538px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+/* CARD COMMON STYLES (Default / First Daba) */
+.bst-card {
+  width: 319px;
+  height: 257px;
+  border-radius: 24px;
+  padding: 32px;
+  background: var(--White, #FFFFFF);
+  box-shadow: 0px 2px 8px 0px var(--Card-Shadow);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bst-card-icon {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 24px;
+  object-fit: contain;
+}
+
+.bst-card-title {
+  font-family: 'PlusJakartaSans';
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+  letter-spacing: 0%;
+  text-align: left;
+  color: var(--Dark-blue, #161D46);
+  margin: 0 0 8px 0;
+}
+
+.bst-card-desc {
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: var(--Text, #3E4354);
+  margin: 0;
+}
+
+/* SECOND DABA (Dark Theme Variant) */
+.bst-card-dark {
+  background: var(--Dark-blue, #161D46);
+}
+
+.bst-card-dark .bst-card-title,
+.bst-card-dark .bst-card-desc {
+  color: #FFFFFF !important;
+}
+
+/* ================================================
+   RESPONSIVE MEDIA QUERIES
+================================================ */
+
+/* --- SMALL LAPTOPS / TABLETS (Max 1220px) --- */
+@media (max-width: 1220px) {
+  .bst-section-wrapper {
+    padding: 60px 40px;
+  }
+
+  .bst-header-container,
+  .bst-content-container {
+    gap: 40px;
+  }
+
+  .bst-header-container {
+    margin-bottom: 50px;
+  }
+
+  .bst-main-heading {
+    font-size: 40px;
+    max-width: 450px;
+  }
+
+  .bst-header-description {
+    font-size: 16px;
+    max-width: 500px;
+  }
+
+  .bst-image-wrapper {
+    width: 440px;
+    height: 500px;
+  }
+
+  .bst-cards-grid {
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .bst-card {
+    width: 100%;
+    height: auto;
+    min-height: 240px;
+    padding: 24px;
+  }
+}
+
+/* --- TABLETS & MOBILE (Max 768px) --- */
+@media (max-width: 768px) {
+  .bst-section-wrapper {
+    padding: 50px 24px;
+  }
+
+  .bst-header-container {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .bst-main-heading,
+  .bst-header-description {
+    max-width: 100%;
+  }
+
+  .bst-main-heading {
+    font-size: 32px;
+    line-height: 125%;
+  }
+
+  .bst-content-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .bst-image-wrapper {
+    width: 100%;
+    height: 380px;
+  }
+
+  .bst-cards-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 16px;
+  }
+
+  .bst-card {
+    width: 100%;
+    height: auto;
+    padding: 24px;
+  }
+}
+
+/* --- SMALL MOBILE (Max 480px) --- */
+@media (max-width: 480px) {
+  .bst-section-wrapper {
+    padding: 40px 16px;
+  }
+
+  .bst-main-heading {
+    font-size: 28px;
+  }
+
+  .bst-header-description {
+    font-size: 15px;
+  }
+
+  .bst-image-wrapper {
+    height: 300px;
+  }
+
+  .bst-card-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .bst-card-icon {
+    margin-bottom: 16px;
+  }
+}
+
+/* --- EXTRA SMALL MOBILE (Max 320px) --- */
+@media (max-width: 320px) {
+  .bst-main-heading {
+    font-size: 24px;
+  }
+
+  .bst-image-wrapper {
+    height: 250px;
+  }
+
+  .bst-card {
+    padding: 16px;
+  }
+}
