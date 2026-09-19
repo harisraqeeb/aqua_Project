@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
   Box,
@@ -14,6 +14,31 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/aqua_clear_logo_white
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+
+  const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+      lastScrollY.current = currentScrollY;
+
+      if (currentScrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Dynamic colors & logo selection based on background
   const textColor = isDarkBg ? "#FFFFFF" : "#3E4354";
@@ -113,24 +138,40 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/aqua_clear_logo_white
   return (
     <Box
       sx={{
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
         width: "100%",
-        padding: "24px 120px",
+        transform: hidden ? "translateY(-100%)" : "translateY(0)",
+        padding: scrolled ? "16px 120px" : "24px 120px",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
-        boxShadow: isDarkBg ? "none" : "0px 2px 8px 0px #7C787833",
+        background: scrolled
+          ? isDarkBg
+            ? "rgba(10, 10, 10, 0.85)"
+            : "rgba(255, 255, 255, 0.85)"
+          : isDarkBg ? "transparent" : "#ffffff",
+        backdropFilter: scrolled ? "blur(12px)" : "none",
+        WebkitBackdropFilter: scrolled ? "blur(12px)" : "none",
+        boxShadow: scrolled
+          ? "0px 4px 20px rgba(0, 0, 0, 0.1)"
+          : isDarkBg
+          ? "none"
+          : "0px 2px 8px 0px #7C787833",
         boxSizing: "border-box",
+        transition: "all 0.3s ease-in-out",
 
         "@media (max-width: 1100px)": {
-          padding: "24px 60px",
+          padding: scrolled ? "16px 60px" : "24px 60px",
         },
 
         "@media (max-width: 768px)": {
-          padding: "18px 30px",
+          padding: scrolled ? "12px 30px" : "18px 30px",
         },
 
         "@media (max-width: 480px)": {
-          padding: "18px 20px",
+          padding: scrolled ? "12px 20px" : "18px 20px",
         },
       }}
     >

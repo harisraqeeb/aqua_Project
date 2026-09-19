@@ -11,18 +11,18 @@ p {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
 #root, .page-zoom-wrapper {
-  overflow-x: hidden;
+  overflow-x: clip;
   width: 100%;
 }
 
@@ -274,7 +274,7 @@ select {
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: none;
   }
 }
 
