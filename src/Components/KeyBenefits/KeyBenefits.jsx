@@ -4,51 +4,51 @@ import "./KeyBenefits.css";
 const benefitsData = [
   {
     id: 1,
-    icon: "/Images/k1.svg", // Replace with your icon paths
-    title: "Tailored Guidance",
-    description: "Personalized plans to meet your learning style and goals",
+    icon: "/Images/purity_badge.svg",
+    title: "9-Stage Purification",
+    description: "Reverse osmosis, ozonation, and UV sterilization for complete purity.",
   },
   {
     id: 2,
-    icon: "/Images/k2.svg",
-    title: "Expert Mentors",
-    description: "Learn from industry professionals with proven success",
+    icon: "/Images/b19l.svg",
+    title: "Eco-Friendly Bottles",
+    description: "BPA-free food grade high-durability recyclable water bottles.",
   },
   {
     id: 3,
-    icon: "/Images/k3.svg",
-    title: "Proven Results",
-    description: "A 5/5-star rating and countless success stories",
+    icon: "/Images/purity_badge.svg",
+    title: "Guaranteed Slots",
+    description: "On-time doorstep delivery for residential and office schedules.",
   },
   {
     id: 4,
-    icon: "/Images/k4.svg",
-    title: "Interactive Community",
-    description: "Engage with peers in dynamic, collaborative sessions",
+    icon: "/Images/purity_badge.svg",
+    title: "Lab Certified Purity",
+    description: "Regular third-party microbiological and mineral laboratory testing.",
   },
   {
     id: 5,
-    icon: "/Images/k5.svg",
-    title: "Rich Resources",
-    description: "Access study materials, practice tests, and templates",
+    icon: "/Images/b12l.svg",
+    title: "Dispenser Support",
+    description: "Dispenser sanitization and replacement support for office partners.",
   },
   {
     id: 6,
-    icon: "/Images/k6.svg",
-    title: "Flexible Timing",
-    description: "Study on your schedule with adaptable course options",
+    icon: "/Images/b1_5l.svg",
+    title: "Flexible Subscriptions",
+    description: "Automated weekly or monthly delivery refills with easy pause options.",
   },
   {
     id: 7,
-    icon: "/Images/k7.svg",
-    title: "Progress Tracking",
-    description: "Monitor growth with regular assessments and feedback",
+    icon: "/Images/b500ml.svg",
+    title: "Corporate Bulk Supply",
+    description: "Customized event bottled water supply for conferences and weddings.",
   },
   {
     id: 8,
-    icon: "/Images/k8.svg",
-    title: "24/7 Support",
-    description: "Assistance whenever you need it, every step of the way",
+    icon: "/Images/purity_badge.svg",
+    title: "24/7 WhatsApp Ordering",
+    description: "Instant order placement, address updates, and delivery tracking.",
   },
 ];
 
@@ -58,10 +58,10 @@ const KeyBenefits = () => {
       {/* Header Container */}
       <div className="benefits-header">
         <h2 className="benefits-title">
-          The Key <span>Benefits</span> of Partnering with Us
+          The Key <span>Benefits</span> of Choosing Aqua Clear
         </h2>
         <p className="benefits-subtitle">
-          Experience tailored support, expert guidance, and a proven track record of success to help you excel in your USMLE exams and residency applications
+          Experience unmatched water purity, guaranteed delivery timing, and dedicated customer support for all your residential and corporate hydration needs.
         </p>
       </div>
 
@@ -69,8 +69,8 @@ const KeyBenefits = () => {
       <div className="benefits-grid">
         {benefitsData.map((item) => (
           <div key={item.id} className="benefit-card">
-            <div className="benefit-icon-wrapper">
-              <img src={item.icon} alt={item.title}/>
+            <div className="benefit-icon-wrapper" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
+              <img src={item.icon} alt={item.title} style={{ width: "36px", height: "36px", objectFit: "contain" }} />
             </div>
             <h3 className="benefit-card-title">{item.title}</h3>
             <p className="benefit-card-desc">{item.description}</p>

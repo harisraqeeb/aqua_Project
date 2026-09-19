@@ -33,35 +33,35 @@
 
 /* First Text (Title) & Margin Bottom 12px */
 .book-free-title {
-font-family: PlusJakartaSans;
-font-weight: 700;
-font-style: Bold;
-font-size: 56px;
-line-height: 60px;
-letter-spacing: 0%;
-text-align: center;
-vertical-align: middle;
-color: var(--White, #FFFFFF);
+  font-family: PlusJakartaSans;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--White, #FFFFFF);
 
   margin: 0px 0px 12px 0px;
 }
 
 /* Accent Word Color */
 .book-free-title span {
-color: var(--Yellow, #F5C147);
+  color: var(--Yellow, #F5C147);
 
 }
 
 /* Subtitle Description */
 .book-free-desc {
- font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-font-size: 18px;
-line-height: 30px;
-letter-spacing: 0%;
-text-align: center;
-color: var(--White, #FFFFFF);
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--White, #FFFFFF);
 
 }
 
@@ -70,22 +70,22 @@ color: var(--White, #FFFFFF);
   margin-top: 40px;
   cursor: pointer;
   width: 330px;
-height: 64px;
-border-radius: 30px;
-background: var(--Yellow, #F5C147);
-border: 1px solid var(--White, #FFFFFF);
-box-shadow: 1px 2px 0px 0px #FFFFFF;
-font-family: Inter;
-font-weight: 500;
-font-style: Medium;
-font-size: 18px;
-line-height: 30px;
-letter-spacing: 0%;
-text-align: center;
-color: var(--Dark-blue, #161D46);
-display: flex;
-align-items: center;
-justify-content: center;
+  height: 64px;
+  border-radius: 30px;
+  background: var(--Yellow, #F5C147);
+  border: 1px solid var(--White, #FFFFFF);
+  box-shadow: 1px 2px 0px 0px #FFFFFF;
+  font-family: Inter;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: var(--Dark-blue, #161D46);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 
 }
@@ -97,12 +97,12 @@ justify-content: center;
 }
 
 @media (max-width: 1445px) {
-.book-free-banner {
-  width: 100%;
-  max-width: 1240px;
-  /* Adjust image path to your banner background location */
-  background: url("/public//Images/cta1440.webp") 0% 100% / cover no-repeat, #101636;
-}
+  .book-free-banner {
+    width: 100%;
+    max-width: 1240px;
+    /* Adjust image path to your banner background location */
+    background: url("/public//Images/cta1440.webp") 0% 100% / cover no-repeat, #101636;
+  }
 
 }
 
@@ -114,7 +114,7 @@ justify-content: center;
   .book-free-section {
     padding: 20px 40px 40px;
   }
-  
+
   .book-free-banner {
     padding: 100px 40px;
   }
@@ -127,19 +127,19 @@ justify-content: center;
 
 @media (max-width: 600px) {
   .book-free-banner {
-  width: 100%;
-  max-width: 1240px;
-  /* Adjust image path to your banner background location */
-  background: url("/public//Images/ctamob.webp") 100% 100% / cover no-repeat, #101636;
-}
+    width: 100%;
+    max-width: 1240px;
+    /* Adjust image path to your banner background location */
+    background: url("/public//Images/ctamob.webp") 100% 100% / cover no-repeat, #101636;
+  }
 
 
   .book-free-section {
     padding: 20px 16px 40px;
   }
 
-    .book-free-banner {
-        padding: 200px 20px;
+  .book-free-banner {
+    padding: 200px 20px;
     border-radius: 12px;
   }
 
@@ -163,13 +163,162 @@ justify-content: center;
 
 
 @media (max-width: 400px) {
-    .book-free-banner {
-              padding: 147px 10px;
-        width: 100%;
-        max-width: 1240px;
-        background: url(/public/Images/ctamob.webp) 32% 100% / cover no-repeat, #101636;
-    }
-    .book-free-section {
-        padding: 20px 10px 40px;
-    }
+  .book-free-banner {
+    padding: 147px 10px;
+    width: 100%;
+    max-width: 1240px;
+    background: url(/public/Images/ctamob.webp) 32% 100% / cover no-repeat, #101636;
   }
+
+  .book-free-section {
+    padding: 20px 10px 40px;
+  }
+}
+
+
+/* =========================================
+   FORM RESPONSIVE - 760px AND BELOW
+   ========================================= */
+
+@media (max-width: 760px) {
+  .book-free-banner {
+    padding: 80px 20px !important;
+
+  }
+
+  .book-free-banner form {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+    padding: 24px !important;
+    box-sizing: border-box;
+  }
+
+  /* Make all 2-column fields full width */
+  .book-free-banner form>div {
+    grid-column: span 1 !important;
+  }
+
+  .book-free-banner form input,
+  .book-free-banner form select,
+  .book-free-banner form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .book-free-banner form label {
+    font-size: 13px !important;
+  }
+
+  .book-free-banner form input,
+  .book-free-banner form select {
+    height: 46px !important;
+    font-size: 14px !important;
+  }
+
+  .book-free-banner form textarea {
+    font-size: 14px !important;
+  }
+
+  /* Submit button */
+  .book-free-banner form button {
+    width: 100% !important;
+    max-width: 340px !important;
+  }
+}
+
+
+/* =========================================
+   FORM - 600px AND BELOW
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .book-free-banner form {
+    padding: 20px !important;
+    gap: 14px !important;
+    border-radius: 18px !important;
+  }
+
+  .book-free-banner form input,
+  .book-free-banner form select {
+    height: 44px !important;
+    font-size: 13px !important;
+  }
+
+  .book-free-banner form textarea {
+    font-size: 13px !important;
+  }
+
+  .book-free-banner form label {
+    font-size: 12px !important;
+  }
+}
+
+
+/* =========================================
+   FORM - 400px AND BELOW
+   ========================================= */
+
+@media (max-width: 400px) {
+
+  .book-free-banner form {
+    padding: 16px !important;
+    gap: 12px !important;
+    border-radius: 16px !important;
+  }
+
+  .book-free-banner form input,
+  .book-free-banner form select {
+    height: 42px !important;
+    padding: 0 12px !important;
+    font-size: 13px !important;
+  }
+
+  .book-free-banner form textarea {
+    padding: 10px 12px !important;
+    font-size: 13px !important;
+  }
+
+  .book-free-banner form button {
+    max-width: 100% !important;
+    height: 46px !important;
+    font-size: 14px !important;
+  }
+}
+
+
+/* =========================================
+   FORM - 320px AND BELOW
+   ========================================= */
+
+@media (max-width: 320px) {
+
+  .book-free-banner form {
+    padding: 12px !important;
+    gap: 10px !important;
+  }
+
+  .book-free-banner form input,
+  .book-free-banner form select {
+    height: 40px !important;
+    padding: 0 10px !important;
+    font-size: 12px !important;
+  }
+
+  .book-free-banner form textarea {
+    padding: 9px 10px !important;
+    font-size: 12px !important;
+  }
+
+  .book-free-banner form label {
+    font-size: 11px !important;
+  }
+
+  .book-free-banner form button {
+    height: 44px !important;
+    font-size: 13px !important;
+  }
+}

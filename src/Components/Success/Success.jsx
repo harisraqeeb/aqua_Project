@@ -1,46 +1,57 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Success.css";
 
 const successData = [
   {
     id: 1,
-    image: "/Images/adam.webp", // Agar file public folder mein hai, toh use '/success-person.png'
+    image: "/Images/happy_client_office.png",
+    badge: "Corporate Client",
     stars: 5,
     description:
-      "Workhorse Growth Partners transformed our digital presence and helped us achieve record growth. Workhorse Growth Partners transformed our digital presence and helped us achieve record growth.",
-    name: "Adam Rae",
-    role: "CEO of UrbanScape Ventures",
-    // Ek testing video link:
-    videoUrl: "https://www.instagram.com/reel/DdLNvZ-iukp/",
+      "Aqua Clear completely transformed our workplace hydration. We get 25 pure 19L dispenser refill bottles delivered twice weekly. Automated invoicing, computerized tracking, and friendly drivers make it 100% hassle-free!",
+    name: "Sarah Ahmed",
+    role: "Operations Director, Tech Hub Solutions",
+    videoUrl: "https://www.youtube.com/embed/uj3OARSSnYo?autoplay=1&rel=0",
   },
   {
     id: 2,
-    image: "/Images/adam.webp", // Replace with different images for other stories if needed
+    image: "/Images/happy_client_home.png",
+    badge: "Residential Client",
     stars: 5,
     description:
-      "Their strategic insight and dedication completely changed our customer acquisition model. Highly recommended team!",
-    name: "Sarah Jenkins",
-    role: "CMO at TechPulse",
-    videoUrl: "https://www.w3schools.com/html/movie.mp4",
+      "As a doctor and a mother, water purity is my top priority. Aqua Clear's 9-stage RO and UV sterilization certification gives me complete peace of mind. The water has a crisp, refreshing natural taste that my kids love!",
+    name: "Dr. Maria Farooq",
+    role: "Pediatrician & Mother of 3, DHA Phase 5",
+    videoUrl: "https://www.youtube.com/embed/BXHIWla7iIg?autoplay=1&rel=0",
   },
   {
     id: 3,
-    image: "/Images/adam.webp",
+    image: "/Images/happy_client_event.png",
+    badge: "Event Partner",
     stars: 5,
     description:
-      "Exceptional results! Our revenue jumped by 40% in just six months of working with Workhorse Growth Partners.",
-    name: "Michael Chen",
-    role: "Founder & Director of Apex Global",
-    videoUrl: "https://www.w3schools.com/html/mov_bbb.mp4",
+      "For our international corporate summit with 500+ attendees, Aqua Clear delivered 3,000 chilled 500ml bottles right to the venue on schedule. Exceptional quality, elegant packaging, and flawless service!",
+    name: "Ayesha Khan",
+    role: "Senior Event Director, Royale Conventions",
+    videoUrl: "https://www.youtube.com/embed/G9nHOIRGgiQ?autoplay=1&rel=0",
+  },
+  {
+    id: 4,
+    image: "/Images/delivery_van.png",
+    badge: "Hospitality Partner",
+    stars: 5,
+    description:
+      "The speed and punctuality of Aqua Clear delivery vehicles is outstanding. Our hotel relies on them daily for high-volume 19L dispenser refills and 1.5L dining table bottles.",
+    name: "Shahid Rafiq",
+    role: "Logistics Manager, Grand Hotel & Suites",
+    videoUrl: "https://www.youtube.com/embed/uj3OARSSnYo?autoplay=1&rel=0&start=60",
   },
 ];
 
 const Success = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-  const videoRef = useRef(null);
 
-  // Jab bhi index change ho, purani video ko band kar dein agar chal rahi ho
   useEffect(() => {
     setIsVideoPlaying(false);
   }, [currentIndex]);
@@ -61,23 +72,13 @@ const Success = () => {
 
   const handlePlayVideo = () => {
     setIsVideoPlaying(true);
-    // Play video programmatically after state change
-    setTimeout(() => {
-      if (videoRef.current) {
-        videoRef.current.play();
-      }
-    }, 50);
-  };
-
-  const handleVideoEnded = () => {
-    setIsVideoPlaying(false); // Video khatam hone par wapis image dikhaein
   };
 
   return (
-    <section className="success-section">
+    <section className="success-section" id="client-stories">
       {/* Heading */}
       <h2 className="success-title">
-        Our Success <span>Story</span>
+        Hear from Our <span>Clients</span>
       </h2>
 
       {/* Main testimonial */}
@@ -86,24 +87,44 @@ const Success = () => {
         <button
           className="success-arrow success-arrow-left"
           onClick={handlePrev}
+          aria-label="Previous Testimonial"
         >
           <img src="/Images/left.svg" alt="Previous" />
         </button>
 
         {/* Image & Video Container */}
         <div className="success-image-box">
+          {/* Badge */}
+          <div
+            style={{
+              position: "absolute",
+              top: "16px",
+              left: "16px",
+              background: "rgba(2, 132, 199, 0.9)",
+              backdropFilter: "blur(6px)",
+              color: "#FFF",
+              padding: "6px 14px",
+              borderRadius: "20px",
+              fontSize: "12px",
+              fontWeight: "600",
+              zIndex: 4,
+              boxShadow: "0 4px 12px rgba(0,0,0,0.15)",
+            }}
+          >
+            {currentItem.badge}
+          </div>
+
           {isVideoPlaying ? (
-            /* Agar video chal rahi hai, toh video dikhaein */
-            <video
-              ref={videoRef}
+            <iframe
               src={currentItem.videoUrl}
-              className="success-image" // Same CSS class as image to maintain size
-              controls // Add controls so user can pause/stop
-              onEnded={handleVideoEnded} // Wapis image par switch karne ke liye
-              style={{ objectFit: "cover" }} // Ensure it covers the area like image
+              className="success-image"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+              allowFullScreen
+              title={`${currentItem.name} video testimonial`}
+              style={{ objectFit: "cover" }}
             />
           ) : (
-            /* Agar video nahi chal rahi, toh image aur play button dikhaein */
             <>
               <img
                 src={currentItem.image}
@@ -112,11 +133,16 @@ const Success = () => {
               />
 
               {/* Play Button */}
-              <button className="success-play" onClick={handlePlayVideo}>
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <button
+                className="success-play"
+                onClick={handlePlayVideo}
+                aria-label="Play Client Video Testimonial"
+                title="Watch Video Review"
+              >
+                <svg width="24" height="24" viewBox="0 0 22 22" fill="none">
                   <path
                     d="M17.5 10.13C18.17 10.52 18.17 11.48 17.5 11.87L7.75 17.5C7.08 17.89 6.25 17.41 6.25 16.63V5.37C6.25 4.59 7.08 4.11 7.75 4.5L17.5 10.13Z"
-                    fill="#171D4C"
+                    fill="#0284C7"
                   />
                 </svg>
               </button>
@@ -126,7 +152,7 @@ const Success = () => {
 
         {/* Testimonial Content */}
         <div className="success-content">
-          {/* Quote */}
+          {/* Quote Icon */}
           <div className="quote-icon">
             <img src="/Images/quoteicon.svg" alt="Quote" />
           </div>
@@ -138,37 +164,23 @@ const Success = () => {
                 key={i}
                 src="/Images/star.svg"
                 alt="Star"
-                className={i === 0 ? "star" : ""}
+                className="star"
+                style={{ width: "22px", height: "22px" }}
               />
             ))}
           </div>
 
-
-          <div className="jhbjhbjhbhbjhb">
-            <div className="quote-icon1">
-              <img src="/Images/quoteicon.svg" alt="Quote" />
-            </div>
-            <div className="success-stars1">
-              {[...Array(currentItem.stars)].map((_, i) => (
-                <img
-                  key={i}
-                  src="/Images/star.svg"
-                  alt="Star"
-                  className={i === 0 ? "star" : ""}
-                />
-              ))}
-            </div>
-          </div>
-
-
-
           {/* Description */}
           <p className="success-description">{currentItem.description}</p>
 
-          {/* Person */}
+          {/* Person Details */}
           <div className="success-person">
-            <h3>{currentItem.name}</h3>
-            <p>{currentItem.role}</p>
+            <h3 style={{ fontSize: "22px", fontWeight: "700", color: "#161D46", margin: "0 0 4px 0" }}>
+              {currentItem.name}
+            </h3>
+            <p style={{ fontSize: "15px", color: "#0284C7", fontWeight: "500", margin: 0 }}>
+              {currentItem.role}
+            </p>
           </div>
         </div>
 
@@ -176,18 +188,18 @@ const Success = () => {
         <button
           className="success-arrow success-arrow-right"
           onClick={handleNext}
+          aria-label="Next Testimonial"
         >
           <img src="/Images/right.svg" alt="Next" />
         </button>
       </div>
 
-      {/* Dots */}
+      {/* Navigation Dots */}
       <div className="success-dots">
         {successData.map((_, index) => (
           <span
             key={index}
-            className={`success-dot ${index === currentIndex ? "active" : ""
-              }`}
+            className={`success-dot ${index === currentIndex ? "active" : ""}`}
             onClick={() => setCurrentIndex(index)}
             style={{ cursor: "pointer" }}
           ></span>

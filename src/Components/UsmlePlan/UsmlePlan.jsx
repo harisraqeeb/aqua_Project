@@ -7,29 +7,30 @@ const UsmlePlan = () => {
       {/* Left Column: Image */}
       <div className="usmle-image-wrapper">
         <img
-          src="/Images/ser1.webp" // Image path yahan add karein
-          alt="USMLE Preparation Team"
+          src="/Images/hero_water.png"
+          alt="Aqua Clear Quality Purification"
           className="usmle-image"
+          style={{ objectFit: "cover" }}
         />
       </div>
 
       {/* Right Column: Content */}
       <div className="usmle-content">
         <h2 className="usmle-heading">
-          <span>USMLE</span> Success Plan
+          <span>Aqua Clear</span> Pure Water Standard
         </h2>
 
         <p className="usmle-paragraph">
-          Our team of experienced USMLE tutors is dedicated to helping you excel in both USMLE Step 1 and Step 2, ensuring you're well-prepared to embark on your medical career with confidence. We cover essential foundational knowledge and high-yield principles, including subjects like anatomy, physiology, biochemistry, and microbiology.
+          Our state-of-the-art water purification facility utilizes a multi-barrier treatment system including sand filtration, active carbon absorption, reverse osmosis (RO), ozonation, and ultra-violet (UV) sterilization to eliminate 99.9% of impurities, heavy metals, and micro-contaminants.
         </p>
 
         <p className="usmle-paragraph">
-          This solid foundation is critical for developing clinical reasoning and diagnostic skills. In addition, we focus on test-taking strategies, helping you manage time, analyze questions, and approach challenging ones effectively. By practicing these strategies, you'll improve your performance and gain the confidence needed to succeed on the exams.
+          We carefully rebalance essential minerals such as Calcium, Magnesium, and Potassium to maintain optimal alkaline pH levels and deliver a crisp, natural, refreshing taste in every bottle. Every batch undergoes strict microbiological and chemical laboratory testing.
         </p>
 
-        {/* Learn More Link with Arrow */}
-        <a href="#learn-more" className="usmle-link">
-          <span>Learn More</span>
+        {/* Order Link with Arrow */}
+        <a href="#cta" className="usmle-link">
+          <span>ORDER WATER NOW</span>
           <svg
             className="usmle-arrow"
             width="20"

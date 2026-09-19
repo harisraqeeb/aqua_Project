@@ -6,10 +6,10 @@ const Personalizedguide = () => {
     <section className="pg-hero-wrapper">
       <div className="pg-hero-content">
         <h1 className="pg-hero-heading">
-          Your <span className="pg-highlight-text">Residency</span> Match Starts Here
+          Complete <span className="pg-highlight-text">Aqua Clear</span> Water Delivery Services
         </h1>
         <p className="pg-hero-subtext">
-          Personalized guidance and expert support to help you craft a standout ERAS application, ace your interviews, and secure your dream residency. Let’s make your journey to success stress-free and rewarding.
+          Explore our comprehensive drinking water delivery solutions designed for homes, corporate offices, educational campuses, health clinics, and special events. Reliable schedules and guaranteed purity.
         </p>
       </div>
     </section>

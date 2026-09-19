@@ -10,13 +10,13 @@ import Footer from '../../Components/Footer/Footer'
 const Blogs = () => {
   return (
     <div>
-        <Navbar/>
-        <BothStep/>
-        <MasteringBasics/>
-        <ClinicalMastery/>
-          <Faq/>
-           <BookFree/>
-      <Footer/>
+      <Navbar />
+      <BothStep />
+      <MasteringBasics />
+      <ClinicalMastery />
+      <Faq />
+      <BookFree />
+      <Footer />
     </div>
   )
 }

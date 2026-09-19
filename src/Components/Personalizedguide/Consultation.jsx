@@ -4,27 +4,27 @@ import './Consultation.css';
 const stepsData = [
   {
     step: "01",
-    title: "Initial Consultation",
-    desc: "Begin with a one-on-one consultation to understand your goals, strengths, and specialty preferences, laying the foundation for strategy",
-    image: "/Images/cons1.webp",
+    title: "Product Selection",
+    desc: "Choose from 19L dispenser bottles, 12L handle bottles, or 1.5L and 500ml bottled water packs.",
+    image: "/Images/b19l.svg",
   },
   {
     step: "02",
-    title: "Application Crafting",
-    desc: "Work closely with your mentor to draft a standout personal statement and refine your ERAS application, ensuring both are polished",
+    title: "Simple Order Placement",
+    desc: "Submit your order details in seconds via our website form or instant WhatsApp chat.",
     image: "/Images/cons2.webp",
   },
   {
     step: "03",
-    title: "Interview Coaching",
-    desc: "Receive expert guidance on answering common and specialty-specific interview questions, building confidence for your big day",
-    image: "/Images/cons3.webp",
+    title: "Dispatch Confirmation",
+    desc: "Our delivery dispatch team confirms your address and assigns a dedicated delivery vehicle.",
+    image: "/Images/delivery_van.png",
   },
   {
     step: "04",
-    title: "Ongoing Support",
-    desc: "Stay on track with continuous assistance, deadline reminders, and advice throughout your residency application process",
-    image: "/Images/cons4.webp",
+    title: "Doorstep Delivery & Refill",
+    desc: "Enjoy fresh, sealed, high-purity drinking water delivered right to your home or office.",
+    image: "/Images/hero_water.png",
   },
 ];
 
@@ -32,7 +32,7 @@ const Consultation = () => {
   return (
     <section className="cst-section-wrapper">
       <h2 className="cst-main-heading">
-        Step-by-Step <span className="cst-highlight-text">Process</span>
+        Step-by-Step <span className="cst-highlight-text">Delivery Process</span>
       </h2>
 
       <div className="cst-steps-container">
@@ -41,8 +41,8 @@ const Consultation = () => {
           return (
             <div key={item.step} className={`cst-step-card-wrapper ${animClass}`}>
               <div className="cst-step-card">
-                <div className="cst-image-container">
-                  <img src={item.image} alt={item.title} className="cst-card-img" />
+                <div className="cst-image-container" style={{ height: "140px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <img src={item.image} alt={item.title} className="cst-card-img" style={{ maxHeight: "110px", width: "auto", objectFit: "contain" }} />
                   <span className="cst-step-badge">{item.step}</span>
                 </div>
                 <h3 className="cst-card-title">{item.title}</h3>

@@ -9,21 +9,22 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
-// Added isDarkBg and darkLogoSrc props
-const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
+// Added isDarkBg and darkLogoSrc props for Aqua Clear
+const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/aqua_clear_logo_white.svg" }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
   // Dynamic colors & logo selection based on background
   const textColor = isDarkBg ? "#FFFFFF" : "#3E4354";
-  const activeTextColor = isDarkBg ? "#F5C147" : "#161D46";
+  const activeTextColor = isDarkBg ? "#38BDF8" : "#0A369D";
   const iconColor = isDarkBg ? "#FFFFFF" : "#161D46";
-  const currentLogo = isDarkBg && darkLogoSrc ? darkLogoSrc : "/Images/logo1.svg";
+  const currentLogo = isDarkBg && darkLogoSrc ? darkLogoSrc : "/Images/aqua_clear_logo.svg";
 
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/ServicePage" },
+    { name: "Products", path: "#products" },
     { name: "Services", path: "/ServiceSuccess" },
     { name: "FAQ", path: "#faq" },
     { name: "Blog", path: "/Blogs" },
@@ -32,6 +33,9 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
   const getIsActive = (linkName) => {
     if (linkName === "FAQ") {
       return location.hash === "#faq";
+    }
+    if (linkName === "Products") {
+      return location.hash === "#products";
     }
     if (linkName === "About") {
       return location.pathname === "/ServicePage";
@@ -43,7 +47,7 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
       return location.pathname === "/Blogs";
     }
     if (linkName === "Home") {
-      return (location.pathname === "/" || location.pathname === "") && location.hash !== "#faq";
+      return (location.pathname === "/" || location.pathname === "") && !location.hash;
     }
     return false;
   };
@@ -69,6 +73,14 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         navigate("/ServiceSuccess");
+      }
+    } else if (link.name === "Products") {
+      const prodElement = document.getElementById("products");
+      if (prodElement) {
+        prodElement.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", "#products");
+      } else {
+        navigate("/#products");
       }
     } else if (link.name === "Blog") {
       if (location.pathname === "/Blogs") {
@@ -250,7 +262,7 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
           },
         }}
       >
-        CTA here
+        ORDER NOW
       </Button>
 
       {/* MOBILE MENU BUTTON */}
@@ -385,7 +397,7 @@ const Navbar = ({ isDarkBg = false, darkLogoSrc = "/Images/logo2.svg" }) => {
             },
           }}
         >
-          CTA here
+          ORDER NOW
         </Button>
       </Drawer>
     </Box>

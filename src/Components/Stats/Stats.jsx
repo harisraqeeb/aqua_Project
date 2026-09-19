@@ -3,20 +3,20 @@ import "./Stats.css";
 
 const statsData = [
   {
-    value: "32%+",
-    description: "Students fail Step 1 on\ntheir first attempt",
+    value: "10,000+",
+    description: "Daily Liters\nDelivered",
   },
   {
-    value: "6 Months",
-    description: "Typical preparation\ntime for Step 1",
+    value: "99.9%",
+    description: "Filtration Purity\nRating",
   },
   {
-    value: "45%+",
-    description: "Struggle with time\nmanagement",
+    value: "100%",
+    description: "On-Time Doorstep\nDelivery",
   },
   {
-    value: "95%+",
-    description: "First-attempt success\nrate",
+    value: "5,000+",
+    description: "Satisfied Homes\n& Offices",
   },
 ];
 

@@ -277,6 +277,8 @@
   backdrop-filter: blur(8px);
 }
 
+
+
 .video-modal-content {
   position: relative;
   width: 90%;
@@ -292,6 +294,19 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.fullscreen-video:fullscreen,
+.fullscreen-video:-webkit-full-screen,
+.fullscreen-video:-moz-full-screen,
+.fullscreen-video:-ms-fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 .close-modal-btn {
@@ -333,12 +348,30 @@
   }
 
   /* 20px gap math: (480/2) + 20 + (130/2) = 325px */
-  .card-left-1 { transform: translateX(-325px); width: 130px; height: 480px; }
-  .card-right-1 { transform: translateX(325px); width: 130px; height: 480px; }
+  .card-left-1 {
+    transform: translateX(-325px);
+    width: 130px;
+    height: 480px;
+  }
+
+  .card-right-1 {
+    transform: translateX(325px);
+    width: 130px;
+    height: 480px;
+  }
 
   /* (325) + 65 + 20 + 55 = 465px */
-  .card-left-2 { transform: translateX(-465px); width: 110px; height: 400px; }
-  .card-right-2 { transform: translateX(465px); width: 110px; height: 400px; }
+  .card-left-2 {
+    transform: translateX(-465px);
+    width: 110px;
+    height: 400px;
+  }
+
+  .card-right-2 {
+    transform: translateX(465px);
+    width: 110px;
+    height: 400px;
+  }
 }
 
 /* --- MOBILE & PORTRAIT TABLETS (Max 768px) --- */
@@ -382,7 +415,8 @@
   }
 
   /* Hide second outer cards on small screen to avoid overflow */
-  .card-left-2, .card-right-2 {
+  .card-left-2,
+  .card-right-2 {
     display: none;
   }
 
@@ -468,5 +502,12 @@
 
   .rating-text {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .dreams-badge-pill {
+    font-size: 12px;
+
   }
 }

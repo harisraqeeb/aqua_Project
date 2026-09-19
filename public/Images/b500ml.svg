@@ -1,0 +1,17 @@
+<svg width="80" height="100" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 500ml Bottle -->
+  <path d="M37 20H43V25H37V20Z" fill="#0284C7"/>
+  <rect x="35" y="25" width="10" height="2" rx="1" fill="#38BDF8"/>
+  <path d="M33 30C33 28 35 27 38 27H42C45 27 47 28 47 30V80C47 83 45 85 42 85H38C35 85 33 83 33 80V30Z" fill="url(#b500-grad)"/>
+  <!-- Label -->
+  <rect x="34" y="44" width="12" height="18" rx="1" fill="#0A369D"/>
+  <text x="40" y="54" font-family="sans-serif" font-weight="bold" font-size="5" fill="#FFFFFF" text-anchor="middle">500ml</text>
+  <text x="40" y="59" font-family="sans-serif" font-weight="bold" font-size="3" fill="#38BDF8" text-anchor="middle">AQUA</text>
+  <defs>
+    <linearGradient id="b500-grad" x1="33" y1="27" x2="47" y2="85" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.7" stop-color="#0284C7"/>
+      <stop offset="1" stop-color="#0A369D"/>
+    </linearGradient>
+  </defs>
+</svg>

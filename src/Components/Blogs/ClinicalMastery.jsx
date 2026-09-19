@@ -4,33 +4,33 @@ import './ClinicalMastery.css';
 const clinicalData = [
   {
     id: 1,
-    title: "Master Clinical Knowledge Areas",
-    highlightWord: "Clinical",
+    title: "Daily Energy & Mental Focus",
+    highlightWord: "Energy",
     paragraphs: [
-      "Step 2 requires you to demonstrate a strong understanding of clinical medicine, including internal medicine, pediatrics, surgery, psychiatry, obstetrics and gynecology, and more. We focus on high-yield clinical knowledge areas that are frequently tested, ensuring that you're well-prepared for the exam's clinical scenarios.",
-      "Our team will work closely with you to enhance your knowledge of essential topics, ensuring you can approach clinical cases with confidence. We reinforce the key principles of disease pathophysiology, diagnosis, and treatment to ensure you're equipped with the knowledge."
+      "Even mild dehydration of 1-2% can reduce concentration, memory retention, and physical energy levels. Consuming purified mineral-balanced water throughout the workday maintains peak cognitive focus and combats fatigue.",
+      "Aqua Clear provides crisp, clean drinking water that encourages constant hydration for office employees, students, and active families."
     ],
-    image: "/Images/core4.webp"
+    image: "/Images/hero_water.png"
   },
   {
     id: 2,
-    title: "Clinical Skills Application",
-    highlightWord: "Skills",
+    title: "Eco-Conscious Bottle Recycling",
+    highlightWord: "Eco-Conscious",
     paragraphs: [
-      "Beyond theory, Step 2 also tests your clinical skills in a practical, patient-centered context. We emphasize the importance of applying your knowledge in simulated clinical scenarios, practicing effective diagnostic reasoning, and making informed treatment decisions.",
-      "Our tutors guide you through a range of clinical cases, helping you develop critical thinking skills that are essential for success. Through case-based learning, you'll be able to refine your skills in history-taking, physical examination, diagnosis, and treatment planning. By mastering these clinical skills, you'll be able to confidently handle the patient cases presented during Step 2."
+      "Our 19L and 12L multi-use dispenser bottles are washed, sanitized, and reused up to 50 times in a closed-loop eco-friendly lifecycle before being responsibly recycled.",
+      "By choosing Aqua Clear dispenser refills, homes and corporate offices significantly reduce single-use plastic waste while enjoying premium quality water."
     ],
-    image: "/Images/core5.webp"
+    image: "/Images/delivery_van.png"
   },
   {
     id: 3,
-    title: "Test-Taking Strategies for Step 2",
-    highlightWord: "Step 2",
+    title: "Convenient Subscription Delivery",
+    highlightWord: "Subscription",
     paragraphs: [
-      "Step 2 is a challenging exam, and performing well requires more than just knowledge. It involves effectively managing time, prioritizing tasks, and analyzing clinical vignettes to select the correct answers. We focus on developing proven test-taking strategies that will help you tackle even the most challenging.",
-      "Techniques such as time management, identifying key information, and using clinical reasoning will allow you to approach each question with confidence. With regular practice and tailored guidance, you'll learn how to efficiently navigate the exam and approach questions with a clear, methodical thought process, ensuring you maximize your score."
+      "No more heavy grocery store carrying or emergency store runs. Aqua Clear offers flexible weekly and monthly subscription plans tailored to your consumption volume.",
+      "Our dedicated logistics team delivers sealed refill bottles directly into your kitchen, breakroom, or storage area with zero effort on your part."
     ],
-    image:"/Images/core6.webp"
+    image: "/Images/c3.png"
   }
 ];
 
@@ -39,19 +39,19 @@ const ClinicalMastery = () => {
     <section className="clm-section-wrapper">
       {/* Header Section */}
       <div className="clm-header-container">
-        <span className="clm-step-badge">STEP 02</span>
+        <span className="clm-step-badge">WORKPLACE WELLNESS</span>
         <h1 className="clm-main-heading">
-          Clinical <span className="clm-highlight-text">Mastery</span>
+          Hydration &amp; <span className="clm-highlight-text">Workplace Wellness</span>
         </h1>
         <p className="clm-header-subtext">
-          Achieving clinical mastery is crucial for performing well on USMLE Step 2. Our tutoring focuses on honing your clinical knowledge and decision-making skills, covering common and high-yield clinical scenarios. We emphasize applying theoretical knowledge to real-world situations.
+          Discover how clean, mineral-balanced drinking water enhances daily energy, mental focus, and overall well-being at home and in corporate environments.
         </p>
       </div>
 
-      {/* Map Loop Container (Gap 40px) */}
+      {/* Map Loop Container */}
       <div className="clm-items-grid">
         {clinicalData.map((item, index) => {
-          const isEven = index % 2 !== 0; // Zigzag alternate layout
+          const isEven = index % 2 !== 0;
 
           const titleParts = item.title.split(item.highlightWord);
 

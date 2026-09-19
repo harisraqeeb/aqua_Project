@@ -60,9 +60,11 @@
   gap: 18px;
   margin-top: 32px;
 }
-.ghvhgv{
+
+.ghvhgv {
   display: none;
 }
+
 /* =========================
    PRIMARY BUTTON
 ========================= */
@@ -96,7 +98,7 @@
    SECONDARY BUTTON
 ========================= */
 .home-first-btn-secondary {
-  width: 164px;
+  width: 200px;
   height: 54px;
   display: flex;
   align-items: center;
@@ -116,6 +118,30 @@
 .home-first-btn-secondary:hover {
   background: #f5f5f5;
   transform: translateY(-2px);
+}
+
+.home-first-btn-whatsapp {
+  padding: 0 24px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  background: #25D366;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
+}
+
+.home-first-btn-whatsapp:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
 }
 
 /* =========================
@@ -186,6 +212,8 @@
   font-size: 18px;
   text-align: center;
   color: var(--Text, #3E4354);
+
+
 }
 
 .home-first-badge-icon {
@@ -213,6 +241,47 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   z-index: 7;
   font-family: 'Inter', sans-serif;
+}
+
+/* =========================
+   CONTINUOUS BADGE ANIMATIONS
+========================= */
+
+.home-first-tutor-badge {
+  animation: purityFloat 3s ease-in-out infinite;
+}
+
+@keyframes purityFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.home-first-students-badge {
+  animation: customerFloat 3.5s ease-in-out infinite;
+}
+
+@keyframes customerFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .Studentscardin {
@@ -522,8 +591,8 @@
     padding: 10px;
   }
 
-  .home-first-avatars img, 
-  .home_first_avatars1, 
+  .home-first-avatars img,
+  .home_first_avatars1,
   .home-first-avatar-count {
     width: 32px;
     height: 32px;
@@ -542,9 +611,10 @@
 
 /* Standard Mobile Devices (600px to 481px) */
 @media (max-width: 600px) {
-  .ghvhgv{
+  .ghvhgv {
     display: block;
   }
+
   .home-first {
     padding: 30px 20px;
   }
@@ -561,7 +631,7 @@
     margin-top: 24px;
   }
 
-  .home-first-btn-primary, 
+  .home-first-btn-primary,
   .home-first-btn-secondary {
     width: 100%;
     max-width: 320px;
@@ -604,9 +674,10 @@
 
 /* Small Mobile Devices (480px to 361px) */
 @media (max-width: 480px) {
-  .jhbjhbj{
-display: none;
+  .jhbjhbj {
+    display: none;
   }
+
   .home-first {
     padding: 24px 16px;
   }
@@ -626,14 +697,14 @@ display: none;
     height: 320px;
   }
 
-     .home-first-image-wrapper {
-        width: 312px;
-        height: 312px;
-    }
+  .home-first-image-wrapper {
+    width: 312px;
+    height: 312px;
+  }
 
   .home-first-tutor-badge {
-       top: 15px;
-        right: -8px;
+    top: 15px;
+    right: -8px;
     height: 36px;
     font-size: 11px;
     gap: 6px;
@@ -645,16 +716,16 @@ display: none;
   }
 
   .home-first-students-badge {
-          left: -4px;
-        bottom: -27px;
+    left: -4px;
+    bottom: -27px;
 
     width: 115px;
     height: 85px;
     padding: 6px;
   }
 
-  .home-first-avatars img, 
-  .home_first_avatars1, 
+  .home-first-avatars img,
+  .home_first_avatars1,
   .home-first-avatar-count {
     width: 26px;
     height: 26px;
@@ -670,24 +741,30 @@ display: none;
     font-size: 9px;
     line-height: 12px;
   }
-      .home-first-content {
-        margin-top: 20px;
-      }
+
+  .home-first-content {
+    margin-top: 20px;
+  }
 }
+
 /* Extra Small Screens (360px & Below) */
 @media (max-width: 360px) {
   .home-first-image-wrapper {
-        width: 254px;
-        height: 280px;
-    }
-        .home-first-tutor-badge {
-        top: 33px;
-        right: -10px;}
-            .home-first-students-badge {
-        left: -5px;
-        bottom: -10px;
-            }
-                .home-first-tutor-badge {
-        top: 23px;
-                }
+    width: 254px;
+    height: 280px;
+  }
+
+  .home-first-tutor-badge {
+    top: 33px;
+    right: -10px;
+  }
+
+  .home-first-students-badge {
+    left: -5px;
+    bottom: -10px;
+  }
+
+  .home-first-tutor-badge {
+    top: 23px;
+  }
 }

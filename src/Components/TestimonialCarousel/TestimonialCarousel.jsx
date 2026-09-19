@@ -1,46 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./TestimonialCarousel.css";
 
 const clientData = [
   {
     id: 1,
-    name: "Steve",
-    company: "Steve's HVAC Crew",
-    image: "/Images/c1.webp",
-    video: "/Images/11.mp4",
+    name: "Sarah Ahmed",
+    company: "Operations Director, Tech Hub",
+    image: "/Images/happy_client_office.png",
+    video: "https://www.youtube.com/embed/uj3OARSSnYo?autoplay=1&rel=0",
     rating: 5,
+    quote: "Aqua Clear dispenser refills keep our 50+ employees hydrated every single day. Pure water & prompt delivery!",
   },
   {
     id: 2,
-    name: "Olivia",
-    company: "Sunny Days Landscaping",
-    image: "/Images/c2.webp",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    name: "Dr. Maria Farooq",
+    company: "Pediatric Clinic & DHA Resident",
+    image: "/Images/happy_client_home.png",
+    video: "https://www.youtube.com/embed/BXHIWla7iIg?autoplay=1&rel=0",
     rating: 5,
+    quote: "Certified 9-stage RO filtration gives our clinic & family total peace of mind. Crisp and refreshing!",
   },
   {
     id: 3,
-    name: "Drew",
-    company: "Aqua Splash Pools",
-    image: "/Images/c3.webp",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    name: "Ayesha Khan",
+    company: "Senior Director, Royale Events",
+    image: "/Images/happy_client_event.png",
+    video: "https://www.youtube.com/embed/G9nHOIRGgiQ?autoplay=1&rel=0",
     rating: 5,
+    quote: "Delivered 3,000 chilled 500ml bottles right on schedule for our international corporate summit.",
   },
   {
     id: 4,
-    name: "Luka",
-    company: "Mighty Roofers",
-    image: "/Images/c4.webp",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    name: "Shahid Rafiq",
+    company: "Grand Hotel & Suites",
+    image: "/Images/delivery_van.png",
+    video: "https://www.youtube.com/embed/uj3OARSSnYo?autoplay=1&rel=0&start=30",
     rating: 5,
+    quote: "Exceptional delivery fleet. Guaranteed morning deliveries for all hotel suites and restaurant dining.",
   },
   {
     id: 5,
-    name: "Emily",
-    company: "Gleam Cleaners",
-    image: "/Images/c5.webp",
-    video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    name: "Usman Ghani",
+    company: "Grand Residency Apartments",
+    image: "/Images/hero_water.png",
+    video: "https://www.youtube.com/embed/BXHIWla7iIg?autoplay=1&rel=0&start=20",
     rating: 5,
+    quote: "Smooth weekly doorstep refills across our entire 40-unit building with automated billing.",
   },
 ];
 
@@ -84,6 +89,25 @@ const TestimonialCarousel = () => {
 
   const currentClient = clientData[activeIndex];
 
+
+
+
+  useEffect(() => {
+    if (isFullscreen) {
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    };
+  }, [isFullscreen]);
+
+
   return (
     <section className="client-carousel-wrapper">
       <h2 className="carousel-heading">
@@ -103,12 +127,13 @@ const TestimonialCarousel = () => {
             >
               {/* Media Swap Logic */}
               {isCenter && isPlaying ? (
-                <video
+                <iframe
                   src={client.video}
                   className="card-video"
-                  controls
-                  autoPlay
-                  onEnded={() => setIsPlaying(false)}
+                  frameBorder="0"
+                  allow="autoplay; encrypted-media; fullscreen"
+                  allowFullScreen
+                  title={`${client.name} video`}
                 />
               ) : (
                 <img
@@ -129,7 +154,7 @@ const TestimonialCarousel = () => {
                       role="button"
                       tabIndex={0}
                     >
-                      <img src="/Images/expendicon.svg" alt="Expand Video" />
+                      {/* <img src="/Images/expendicon.svg" alt="Expand Video" /> */}
                     </div>
                   )}
 
@@ -197,11 +222,13 @@ const TestimonialCarousel = () => {
             <button className="close-modal-btn" onClick={() => setIsFullscreen(false)}>
               &times;
             </button>
-            <video
+            <iframe
               src={currentClient.video}
-              controls
-              autoPlay
+              frameBorder="0"
+              allow="autoplay; encrypted-media; fullscreen"
+              allowFullScreen
               className="fullscreen-video"
+              title="Full screen video"
             />
           </div>
         </div>

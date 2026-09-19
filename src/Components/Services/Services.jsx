@@ -1,31 +1,48 @@
 import React from "react";
 import "./Services.css";
 
-const servicesData = [
+const productsData = [
   {
     id: 1,
-    title: "Residency & Match",
+    title: "19L Water Bottle",
+    subtitle: "5 Gallon Dispenser Refill",
     description:
-      "No cookie cutter approaches. By accounting for your preferences, goals, and study style, we'll customize the most effective plan for you. Our individualized approach means a better score for you",
-    type: "home",
+      "Ideal for homes and offices with convenient refill and delivery options. Compatible with standard hot/cold water dispensers.",
+    suitable: "Homes, Executive Offices, Clinics & Large Families",
+    icon: "/Images/b19l.svg",
+    badge: "Most Popular",
   },
   {
     id: 2,
-    title: "USMLE Tutoring",
+    title: "12L Water Bottle",
+    subtitle: "3 Gallon Handle Bottle",
     description:
-      "No cookie cutter approaches. By accounting for your preferences, goals, and study style, we'll customize the most effective plan for you. Our individualized approach means a better score for you",
-    type: "edit",
+      "Compact size with ergonomic carrying handle. Easy to lift, store, and position on kitchen countertops or desks.",
+    suitable: "Small Apartments, Workstations, Senior Citizens",
+    icon: "/Images/b12l.svg",
+    badge: "Convenient",
   },
   {
     id: 3,
-    title: "Personal Statement",
+    title: "1.5L Bottled Water",
+    subtitle: "Everyday Hydration Pack",
     description:
-      "No cookie cutter approaches. By accounting for your preferences, goals, and study style, we'll customize the most effective plan for you. Our individualized approach means a better score for you",
-    type: "document",
+      "Convenient drinking water for homes, workplaces, travel, dining tables, and everyday family hydration.",
+    suitable: "Dining Tables, Workplaces, Gym, Daily Travel",
+    icon: "/Images/b1_5l.svg",
+    badge: "Family Favorite",
+  },
+  {
+    id: 4,
+    title: "500ml Bottled Water",
+    subtitle: "On-The-Go Single Serve",
+    description:
+      "Easy-to-carry single-serve bottled water for individuals, office meetings, corporate conferences, and events.",
+    suitable: "Events, Conferences, Personal Carry, Hospitality",
+    icon: "/Images/b500ml.svg",
+    badge: "Event Special",
   },
 ];
-
-
 
 const ArrowIcon = () => (
   <svg
@@ -53,59 +70,84 @@ const ArrowIcon = () => (
 
 const Services = () => {
   return (
-    <section className="services">
-  
+    <section className="services" id="products">
+      {/* Heading */}
+      <div className="services-header">
+        <h2>
+          Our Premium <span>Products</span> &amp;
+          <br />
+          Water Sizes
+        </h2>
 
-        {/* Heading */}
-        <div className="services-header">
-          <h2>
-            Empower Your <span>Journey</span> to
-            <br />
-            Success
-          </h2>
+        <p>
+          Pure, healthy, and lab-certified mineral-balanced drinking water packaged in various sizes tailored for homes, corporate offices, and special events.
+        </p>
+      </div>
 
-          <p>
-            Expert USMLE Step 1 &amp; Step 2 tutoring tailored to future
-            physicians. Achieve your goals with personalized guidance designed to help you excel
-          </p>
-        </div>
-
-        {/* Cards */}
-        <div className="services-cards">
-          {servicesData.map((service, idx) => {
-            const animClass = idx === 0 ? "zoom-in-left" : idx === 1 ? "zoom-in-up" : "zoom-in-right";
-            return (
+      {/* Cards Grid */}
+      <div className="services-cards" style={{ flexWrap: "wrap", justifyContent: "center" }}>
+        {productsData.map((product, idx) => {
+          const animClass =
+            idx === 0
+              ? "zoom-in-left"
+              : idx === 1
+              ? "zoom-in-up"
+              : idx === 2
+              ? "zoom-in-up"
+              : "zoom-in-right";
+          return (
+            <div
+              className={`service-card ${animClass} ${
+                product.id === 1 ? "active-card" : ""
+              }`}
+              key={product.id}
+            >
+              {/* Product Badge */}
               <div
-                className={`service-card ${animClass} ${
-                  service.id === 2 ? "active-card" : ""
-                }`}
-                key={service.id}
+                style={{
+                  fontSize: "12px",
+                  fontWeight: "600",
+                  color: "#0284C7",
+                  background: "rgba(2, 132, 199, 0.1)",
+                  padding: "4px 10px",
+                  borderRadius: "12px",
+                  display: "inline-block",
+                  marginBottom: "12px",
+                }}
               >
-                {/* Icon */}
-                <div className="service-icon">
-                  {service.type === "home" && <img src="/Images/s1.svg" alt="" />}
-                  {service.type === "edit" && <img src="/Images/s2.svg" alt="" />}
-                  {service.type === "document" && <img src="/Images/s3.svg" alt="" />}
-                </div>
-
-                {/* Content */}
-                <div className="service-content">
-                  <h3>{service.title}</h3>
-
-                  <p>{service.description}</p>
-                </div>
-
-                {/* Learn More */}
-                <a href="#learn-more" className="learn-more">
-                  <span>Learn More</span>
-                  <ArrowIcon />
-                </a>
+                {product.badge}
               </div>
-            );
-          })}
-        </div>
 
-     
+              {/* Icon */}
+              <div className="service-icon" style={{ height: "90px", display: "flex", alignItems: "center" }}>
+                <img
+                  src={product.icon}
+                  alt={product.title}
+                  style={{ width: "auto", height: "80px", objectFit: "contain" }}
+                />
+              </div>
+
+              {/* Content */}
+              <div className="service-content">
+                <h3>{product.title}</h3>
+                <span style={{ fontSize: "14px", color: "#0284C7", fontWeight: "500", display: "block", marginBottom: "8px" }}>
+                  {product.subtitle}
+                </span>
+                <p>{product.description}</p>
+                <div style={{ marginTop: "10px", fontSize: "13px", color: "#5C768D", fontStyle: "italic" }}>
+                  <strong>Suitable for:</strong> {product.suitable}
+                </div>
+              </div>
+
+              {/* Order Now CTA */}
+              <a href="#cta" className="learn-more">
+                <span>ORDER NOW</span>
+                <ArrowIcon />
+              </a>
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 };

@@ -4,62 +4,63 @@ import './Boost.css';
 const Boost = () => {
   return (
     <section className="bst-section-wrapper">
-      {/* First Div: Text Section (Gap 80px) */}
+      {/* First Div: Text Section */}
       <div className="bst-header-container">
         <h2 className="bst-main-heading">
-          Core Services to Boost Your  <span className="bst-highlight-text">Success</span>
+          Core Water Services for <span className="bst-highlight-text">Homes &amp; Offices</span>
         </h2>
         <p className="bst-header-description">
-         Achieving your residency dreams starts with the right support. Our comprehensive services are designed to guide you through every step of the process, from perfecting your ERAS application to nailing your interview
+          From weekly residential bottle refills to corporate dispenser supply, bulk event hydration, and automated subscription plans, Aqua Clear delivers pure refreshment.
         </p>
       </div>
 
-      {/* Second Div: Content & Image Grid (Gap 80px) */}
+      {/* Second Div: Content & Image Grid */}
       <div className="bst-content-container">
         {/* Left Side: Image */}
         <div className="bst-image-wrapper zoom-in-left">
           <img
-            src="/Images/Boost1.webp"
-            alt="Residency Application Boost"
+            src="/Images/delivery_van.png"
+            alt="Aqua Clear Delivery Logistics"
             className="bst-feature-image"
+            style={{ objectFit: "cover" }}
           />
         </div>
 
-        {/* Right Side: 2x2 Cards Grid (Width 662px, Height 538px, Gap 24px) */}
+        {/* Right Side: 2x2 Cards Grid */}
         <div className="bst-cards-grid zoom-in-right">
           {/* Card 1 */}
           <div className="bst-card">
-            <img src="/Images/Boost2.svg" alt="Icon" className="bst-card-icon" />
-            <h3 className="bst-card-title">Application Review</h3>
+            <img src="/Images/b19l.svg" alt="Icon" className="bst-card-icon" style={{ height: "40px" }} />
+            <h3 className="bst-card-title">Residential Delivery</h3>
             <p className="bst-card-desc">
-              Your mentor will meticulously review and edit your ERAS application to ensure it’s polished, error-free, and tailored to your specialty
+              Scheduled doorstep delivery of 19L dispenser bottles and 12L handle bottles for homes and apartments.
             </p>
           </div>
 
-          {/* Card 2 (Dark Theme - Second Daba) */}
+          {/* Card 2 (Dark Theme) */}
           <div className="bst-card bst-card-dark">
-            <img src="/Images/Boost3.svg" alt="Icon" className="bst-card-icon" />
-            <h3 className="bst-card-title">Personal Statement</h3>
+            <img src="/Images/b12l.svg" alt="Icon" className="bst-card-icon" style={{ height: "40px" }} />
+            <h3 className="bst-card-title">Office Water Supply</h3>
             <p className="bst-card-desc">
-             Create a personal statement that showcases your unique qualities, goals, and aspirations. Stand out from other applicants
+              Reliable commercial dispenser supply with monthly consolidated billing and free dispenser sanitization.
             </p>
           </div>
 
           {/* Card 3 */}
           <div className="bst-card">
-            <img src="/Images/Boost4.svg" alt="Icon" className="bst-card-icon" />
-            <h3 className="bst-card-title">Interview Prep</h3>
+            <img src="/Images/b500ml.svg" alt="Icon" className="bst-card-icon" style={{ height: "40px" }} />
+            <h3 className="bst-card-title">Event &amp; Bulk Supply</h3>
             <p className="bst-card-desc">
-             Ace your residency interviews with confidence. We prepare you for common questions and help you present your best self to program 
+              500ml and 1.5L bottled water packs for corporate conferences, sports tournaments, weddings, and parties.
             </p>
           </div>
 
           {/* Card 4 */}
           <div className="bst-card">
-            <img src="/Images/Boost5.svg" alt="Icon" className="bst-card-icon" />
-            <h3 className="bst-card-title">Timely Help</h3>
+            <img src="/Images/purity_badge.svg" alt="Icon" className="bst-card-icon" style={{ height: "40px" }} />
+            <h3 className="bst-card-title">Rapid 24h Dispatch</h3>
             <p className="bst-card-desc">
-             Stay on track with our dedicated support. We ensure you meet every deadline stress-free, paving the way for a smooth residency application
+              Dedicated delivery fleet operating Monday through Saturday to ensure you never run out of clean drinking water.
             </p>
           </div>
         </div>

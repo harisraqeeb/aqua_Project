@@ -1,0 +1,20 @@
+<svg width="80" height="100" viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 1.5L Bottle Pack -->
+  <path d="M36 12H44V18H36V12Z" fill="#0284C7"/>
+  <rect x="34" y="18" width="12" height="3" rx="1" fill="#38BDF8"/>
+  <path d="M31 24C31 22 33 21 37 21H43C47 21 49 22 49 24V84C49 87 46 90 43 90H37C34 90 31 87 31 84V24Z" fill="url(#b15-grad)"/>
+  <!-- Ridges -->
+  <line x1="32" y1="36" x2="48" y2="36" stroke="#FFFFFF" stroke-width="1.5" opacity="0.4"/>
+  <line x1="32" y1="68" x2="48" y2="68" stroke="#FFFFFF" stroke-width="1.5" opacity="0.4"/>
+  <!-- Label -->
+  <rect x="33" y="42" width="14" height="20" rx="1" fill="#0A369D"/>
+  <text x="40" y="53" font-family="sans-serif" font-weight="bold" font-size="7" fill="#FFFFFF" text-anchor="middle">1.5L</text>
+  <text x="40" y="59" font-family="sans-serif" font-weight="bold" font-size="4" fill="#38BDF8" text-anchor="middle">PURE</text>
+  <defs>
+    <linearGradient id="b15-grad" x1="31" y1="21" x2="49" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38BDF8"/>
+      <stop offset="0.7" stop-color="#0284C7"/>
+      <stop offset="1" stop-color="#0A369D"/>
+    </linearGradient>
+  </defs>
+</svg>

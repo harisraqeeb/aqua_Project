@@ -9,19 +9,18 @@ import ResidencyMatch from '../../Components/UsmlePlan/ResidencyMatch'
 import PersonalStatement from '../../Components/UsmlePlan/PersonalStatement'
 import TestimonialCarousel from '../../Components/TestimonialCarousel/TestimonialCarousel'
 
-
 const ServicePage = () => {
   return (
     <div className="HomeFirst_Main">
-        <Dreams/>
-       <KeyBenefits/>
-<UsmlePlan/>
-<ResidencyMatch/>
-<PersonalStatement/>
-<TestimonialCarousel/>
-<Testimonial/>
-       <BookFree/>
-            <Footer/>
+      <Dreams />
+      <KeyBenefits />
+      <UsmlePlan />
+      <ResidencyMatch />
+      <PersonalStatement />
+      <TestimonialCarousel />
+      <Testimonial />
+      <BookFree />
+      <Footer />
     </div>
   )
 }

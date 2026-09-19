@@ -4,38 +4,44 @@ import "./Faq.css";
 const faqData = [
   {
     id: 1,
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+    question: "What types of drinking water and bottle sizes are available?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit eros, tempor in mi et, congue placerat dui. Nullam in mi.",
+      "Aqua Clear provides 19L (5-Gallon) dispenser refill bottles, 12L (3-Gallon) handle bottles, 1.5L everyday family bottles, and 500ml single-serve bottles for meetings and events.",
   },
   {
     id: 2,
-    question: "Lorem ipsum dolor sit amet, conelit?",
+    question: "Do you deliver water to homes and residential locations?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit eros, tempor in mi et, congue placerat dui.",
+      "Yes! We offer prompt doorstep delivery to houses, apartments, and residential communities with flexible delivery slots to fit your daily schedule.",
   },
   {
     id: 3,
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+    question: "Do you provide water solutions for offices and commercial businesses?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit eros, tempor in mi et, congue placerat dui. Nullam in mi",
+      "Absolutely. We supply corporate offices, commercial facilities, clinics, and banks with regular 19L dispenser refills, dispenser maintenance, and dedicated account support.",
   },
   {
     id: 4,
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit?",
+    question: "How can I place an order with Aqua Clear?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit eros, tempor in mi et, congue placerat dui.",
+      "You can place an order in seconds using our online order form above, or click the WhatsApp button to message our customer service team directly.",
   },
   {
     id: 5,
-    question: "Lorem ipsum dolor sit amet, conelit?",
+    question: "Can I schedule regular recurring water deliveries?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas velit eros, tempor in mi et, congue placerat dui.",
+      "Yes, we offer convenient weekly, bi-weekly, or monthly delivery schedules so you never run out of fresh drinking water.",
+  },
+  {
+    id: 6,
+    question: "Do you supply bulk water for corporate events and functions?",
+    answer:
+      "Yes, we provide bulk supply packages of 500ml and 1.5L bottled water for corporate events, sports gatherings, weddings, and conferences with advance booking.",
   },
 ];
 
 const Faq = () => {
-  const [openId, setOpenId] = useState(3);
+  const [openId, setOpenId] = useState(1);
 
   const toggleFaq = (id) => {
     setOpenId(openId === id ? null : id);
@@ -44,7 +50,6 @@ const Faq = () => {
   return (
     <section className="faq-section" id="faq">
       <div className="faq-container">
-        
         {/* Left Section */}
         <div className="faq-left zoom-in-left">
           <h2 className="faq-title">
@@ -52,9 +57,15 @@ const Faq = () => {
             We’ve Got <span>Answers</span>
           </h2>
           <p className="faq-desc">
-            Find answers to the most common questions about our services, tutoring process, and how we can help you succeed in your USMLE journey.
+            Find answers to the most common questions about Aqua Clear drinking water, multi-barrier purification, delivery schedules, and ordering options.
           </p>
-          <button className="faq-cta-btn">CTA here</button>
+          <a
+            href="#cta"
+            className="faq-cta-btn"
+            style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", textDecoration: "none" }}
+          >
+            ORDER NOW
+          </a>
         </div>
 
         {/* Right Section */}
@@ -99,7 +110,6 @@ const Faq = () => {
             );
           })}
         </div>
-
       </div>
     </section>
   );

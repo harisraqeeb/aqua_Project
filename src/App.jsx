@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home";
 import ServicePage from "./Pages/ServicePage/ServicePage";
 import ServiceSuccess from "./Pages/ServiceSuccess/ServiceSuccess";
 import Blogs from "./Pages/Blog/Blogs";
+import FloatingWhatsApp from "./Components/FloatingWhatsApp/FloatingWhatsApp";
 
 const ScrollToTopAndHash = () => {
   const { pathname, hash } = useLocation();
@@ -110,6 +111,8 @@ function App() {
           <Route path="/Blogs" element={<Blogs />} />
         </Routes>
       </div>
+      {/* Floating WhatsApp - always visible, bottom-right, fixed globally */}
+      <FloatingWhatsApp />
     </BrowserRouter>
   );
 }

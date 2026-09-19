@@ -6,6 +6,7 @@ import Consultation from '../../Components/Personalizedguide/Consultation'
 import Faq from '../../Components/Faq/Faq'
 import BookFree from '../../Components/BookFree/BookFree'
 import Footer from '../../Components/Footer/Footer'
+import StickyProjects from '../../Components/StickyProjects/StickyProjects'
 
 const ServiceSuccess = () => {
   return (
@@ -14,6 +15,7 @@ const ServiceSuccess = () => {
       <Personalizedguide />
       <Boost />
       <Consultation />
+      <StickyProjects />
       <Faq />
       <BookFree />
       <Footer />

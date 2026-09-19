@@ -7,33 +7,34 @@ const PersonalStatement = () => {
       {/* Left Column: Image */}
       <div className="ps-visual-container">
         <img
-          src="/Images/s3.webp" // Image path yahan add karein
-          alt="Personal Statement Guidance"
+          src="/Images/hero_water.png"
+          alt="Aqua Clear Sealed Bottled Water"
           className="ps-featured-image"
+          style={{ objectFit: "cover" }}
         />
       </div>
 
       {/* Right Column: Text Content */}
       <div className="ps-details-block">
         <h2 className="ps-main-heading">
-          <span>Personal</span> Statement
+          <span>Uncompromising</span> Hygiene Guarantee
         </h2>
 
         <p className="ps-body-text">
-          Crafting an outstanding personal statement is essential for making a lasting impression on residency programs. While an average personal statement may not harm your application, a stellar one can significantly increase your chances of landing an interview.
+          Every Aqua Clear bottle undergoes an automated 6-step washing, sanitizing, and rinsing cycle before filling. We utilize 100% food-grade BPA-free Polycarbonate and PET materials that preserve water freshness without odor or leaching.
         </p>
 
         <p className="ps-body-text">
-          We work with you to create a statement that reflects your unique qualities and aspirations, helping you stand out from other candidates.
+          Our filling and capping lines are fully automated inside HEPA air-filtered sterile cleanrooms, preventing human contact and external exposure during bottling.
         </p>
 
         <p className="ps-body-text">
-          Your mentor will guide you in writing a personal statement that showcases your personal identity, ties together your academic and professional story, sets you apart, addresses any weaknesses or gaps, and opens the door for interviews.
+          Each bottle is capped with a tamper-evident heat seal so you receive 100% genuine, untouched, factory-fresh drinking water every single time.
         </p>
 
         {/* Learn More Action Link */}
-        <a href="#learn-more" className="ps-action-link">
-          <span>Learn More</span>
+        <a href="#cta" className="ps-action-link">
+          <span>ORDER GUARANTEED PURE WATER</span>
           <svg
             className="ps-arrow-svg"
             width="20"

@@ -7,24 +7,24 @@ const ResidencyMatch = () => {
       {/* Left Column: Text Content */}
       <div className="residency-info">
         <h2 className="residency-title">
-          Residency & <span>Match</span>
+          Corporate &amp; <span>Commercial</span> Water Delivery
         </h2>
 
         <p className="residency-text">
-          Our ERAS application services offer a variety of essential offerings designed to maximize your chances for success. We begin with ERAS Application Review and Editing, where your mentor will carefully review and refine your application to ensure it is error-free and tailored to your specialty, making a strong impression on program directors.
+          Aqua Clear specializes in dedicated commercial water delivery tailored for offices, banks, clinics, corporate centers, educational institutions, and hospitality venues. We ensure your workplace remains continuously hydrated with zero downtime.
         </p>
 
         <p className="residency-text">
-          Next, we focus on your Personal Statement Review and Editing. Together, we'll craft a statement that reflects your true qualities and aspirations, helping you stand out among other applicants and making your statement a key factor in landing interviews.
+          Our corporate accounts feature flexible volume discounts, automated recurring delivery schedules, free monthly dispenser sanitization, and consolidated monthly billing for effortless administrative management.
         </p>
 
         <p className="residency-text">
-          Finally, our Interview Preparation ensures that you're ready for the most commonly asked questions. We help you articulate your thoughts clearly, so you can confidently present yourself and show programs who you truly are.
+          From 19L dispenser refills to 500ml custom-branded bottles for corporate board meetings, Aqua Clear delivers guaranteed purity and professionalism.
         </p>
 
         {/* Learn More Link with Arrow */}
-        <a href="#learn-more" className="residency-cta-link">
-          <span>Learn More</span>
+        <a href="#cta" className="residency-cta-link">
+          <span>SETUP CORPORATE ACCOUNT</span>
           <svg
             className="residency-arrow-icon"
             width="20"
@@ -45,9 +45,10 @@ const ResidencyMatch = () => {
       {/* Right Column: Image */}
       <div className="residency-media-frame">
         <img
-          src="/Images/ser2.webp" // Apna image path yahan dabein
-          alt="Residency & Match Guidance"
+          src="/Images/delivery_van.png"
+          alt="Aqua Clear Corporate Water Delivery"
           className="residency-banner-img"
+          style={{ objectFit: "cover" }}
         />
       </div>
     </section>

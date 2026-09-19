@@ -1,98 +1,429 @@
-/* Main Background Section */
+/* ================================================
+   DREAMS HERO SECTION - FULLY RESPONSIVE STYLES
+================================================ */
+
+/* Main Hero Background Container */
 .DreamsMAin {
+  position: relative;
   width: 100%;
-  /* Image path fix with dark overlay for better text contrast */
-  background-image: url('/Images/ser1512q.webp');
+  min-height: 540px;
+  background-image: linear-gradient(180deg, rgba(10, 25, 47, 0.70) 0%, rgba(2, 132, 199, 0.80) 100%), url('/Images/aqua_clear_header_bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
-/* Content Container */
+/* TOP-TO-BOTTOM SLIDE DOWN ENTRANCE ANIMATION */
+@keyframes slideDownFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px) scale(0.96);
+  }
+  60% {
+    opacity: 0.9;
+    transform: translateY(10px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulsePillDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+.animate-slide-down {
+  animation: slideDownFromTop 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Inner Content Container */
 .DreamsMAin1 {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 80px 120px 100px;
+  padding: 70px 120px 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  gap: 16px;
+  gap: 22px;
+  text-align: center;
+}
+
+/* Badge Pill */
+.dreams-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 8px 22px;
+  border-radius: 30px;
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+}
+
+.dreams-pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #38BDF8;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulsePillDot 2s infinite ease-in-out;
 }
 
 /* Main Heading */
 .DreamsMAin1_P1 {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 1.2;
+  font-weight: 800;
+  font-size: clamp(28px, 5vw, 58px);
+  line-height: 1.18;
   text-align: center;
   max-width: 1028px;
-  color: var(--White, #FFFFFF);
+  color: #FFFFFF;
   margin: 0;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.DreamsMAin1_P1 span {
+  color: #38BDF8;
+  background: linear-gradient(135deg, #7DD3FC 0%, #38BDF8 50%, #0284C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Subtitle / Paragraph */
 .DreamsMAin1_P2 {
   font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: clamp(14px, 2vw, 18px);
   line-height: 1.6;
   text-align: center;
-  color: var(--White, #FFFFFF);
-  max-width: 1028px;
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 860px;
   margin: 0;
+}
+
+/* Action Buttons Container */
+.dreams-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* Primary Order Button */
+.dreams-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(2, 132, 199, 0.45);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+}
+
+.dreams-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(2, 132, 199, 0.65);
+}
+
+/* Secondary Watch Video Button */
+.dreams-btn-video {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 28px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #FFFFFF;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.dreams-btn-video:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.28);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.dreams-play-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #38BDF8;
+  color: #0A192F;
+  border-radius: 50%;
+  font-size: 11px;
+  padding-left: 2px;
+  flex-shrink: 0;
+}
+
+/* ================================================
+   VIDEO MODAL STYLING (PERFECTLY RESPONSIVE)
+================================================ */
+.dreams-video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 25, 47, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Video Card Modal Box */
+.dreams-video-card {
+  position: relative;
+  width: min(94%, calc(82vh * 1.777));
+  max-width: 980px;
+  aspect-ratio: 16 / 9;
+  max-height: 82vh;
+  background: #000000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Close Button */
+.dreams-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  font-size: 26px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  line-height: 1;
+  transition: background 0.25 ease, transform 0.25 ease, border-color 0.25 ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.dreams-close-btn:hover {
+  background: rgba(2, 132, 199, 0.9);
+  border-color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+/* Embedded iFrame Video Player */
+.dreams-video-player {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* Browser Native Fullscreen Mode Overrides */
+.dreams-video-player:fullscreen,
+.dreams-video-player:-webkit-full-screen,
+.dreams-video-player:-moz-full-screen,
+.dreams-video-player:-ms-fullscreen {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  object-fit: contain !important;
 }
 
 /* ================================================
    RESPONSIVE MEDIA QUERIES
 ================================================ */
 
-/* Laptops & Small Desktops (<= 1200px) */
+/* Laptops & Desktops (<= 1200px) */
 @media (max-width: 1200px) {
   .DreamsMAin1 {
-    padding: 60px 60px 80px;
-  }
-
-  .DreamsMAin1_P1 {
-    font-size: 48px;
+    padding: 60px 48px 80px;
+    gap: 18px;
   }
 }
 
-/* Tablets (<= 768px) */
-@media (max-width: 768px) {
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .DreamsMAin {
+    min-height: 480px;
+  }
+
   .DreamsMAin1 {
-    padding: 50px 24px 60px;
+    padding: 50px 32px 70px;
+  }
+
+  .dreams-video-overlay {
+    padding: 20px;
+  }
+
+  .dreams-video-card {
+    border-radius: 14px;
+  }
+}
+
+/* Small Tablets / Large Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .DreamsMAin {
+    min-height: 440px;
+  }
+
+  .DreamsMAin1 {
+    padding: 44px 20px 60px;
+    gap: 16px;
+  }
+
+  .dreams-badge-pill {
+    padding: 7px 16px;
+    font-size: 13px;
+  }
+
+  .dreams-video-overlay {
+    padding: 14px;
+  }
+
+  .dreams-video-card {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .dreams-close-btn {
+    top: 10px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+}
+
+/* Mobile Screens (<= 576px) */
+@media (max-width: 576px) {
+  .DreamsMAin {
+    min-height: 400px;
+    background-image: linear-gradient(180deg, rgba(10, 25, 47, 0.78) 0%, rgba(2, 132, 199, 0.88) 100%), url('/Images/mobq.webp');
+  }
+
+  .DreamsMAin1 {
+    padding: 36px 16px 48px;
+    gap: 14px;
+  }
+
+  .dreams-badge-pill {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  .dreams-actions {
+    flex-direction: column;
+    width: 100%;
     gap: 12px;
   }
 
-  .DreamsMAin1_P1 {
-    font-size: 36px;
+  .dreams-btn-primary,
+  .dreams-btn-video {
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  .DreamsMAin1_P2 {
-    font-size: 16px;
+  .dreams-video-overlay {
+    padding: 10px;
+  }
+
+  .dreams-video-card {
+    border-radius: 10px;
+  }
+
+  .dreams-close-btn {
+    top: 8px;
+    right: 8px;
+    width: 34px;
+    height: 34px;
+    font-size: 20px;
   }
 }
 
-/* Mobile Screens (<= 480px) */
-@media (max-width: 480px) {
-  .DreamsMAin {
-    background-image: url('/Images/mobq.webp');
-  }
-
+/* Very Small Mobile Screens (<= 380px) */
+@media (max-width: 380px) {
   .DreamsMAin1 {
-    padding: 40px 16px 50px;
+    padding: 28px 12px 40px;
   }
 
-  .DreamsMAin1_P1 {
-    font-size: 26px;
+  .dreams-badge-pill {
+    font-size: 11px;
+    padding: 5px 12px;
   }
 
-  .DreamsMAin1_P2 {
+  .dreams-btn-primary,
+  .dreams-btn-video {
     font-size: 14px;
+    padding: 12px 20px;
+  }
+
+  .dreams-video-overlay {
+    padding: 6px;
+  }
+
+  .dreams-close-btn {
+    top: 6px;
+    right: 6px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
   }
 }
