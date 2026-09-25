@@ -35,7 +35,15 @@ const Dreams = () => {
 
         {/* Action Buttons */}
         <div className='dreams-actions'>
-          <a href="#order-now" className='dreams-btn-primary'>
+          <a
+            href="#cta"
+            className='dreams-btn-primary'
+            onClick={(e) => {
+              e.preventDefault();
+              const cta = document.getElementById("cta");
+              if (cta) cta.scrollIntoView({ behavior: "smooth" });
+            }}
+          >
             Order Water Now
           </a>
           <button

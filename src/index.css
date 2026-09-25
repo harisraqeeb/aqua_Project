@@ -61,6 +61,7 @@ img {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 ul,
@@ -68,7 +69,37 @@ ol {
   list-style: none;
 }
 
-button {
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+select,
+summary,
+[role="button"],
+.MuiButton-root,
+.MuiIconButton-root,
+.btn,
+.button,
+.clickable,
+.service-card,
+.why-choose-card,
+.faq-item,
+.home-first-btn-primary,
+.home-first-btn-secondary,
+.home-first-btn-whatsapp,
+.faq-cta-btn,
+.book-free-btn,
+.dreams-btn-primary,
+.dreams-btn-video,
+.social-icons a,
+.footer-link,
+.legal-link,
+.contact-item a,
+.floating-whatsapp-btn,
+.nav-arrow,
+.play-btn,
+.close-modal-btn,
+.dreams-close-btn {
   cursor: pointer;
 }
 

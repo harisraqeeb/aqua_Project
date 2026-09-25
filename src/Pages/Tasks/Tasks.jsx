@@ -7,8 +7,6 @@ const Tasks = () => {
 
 
 
-
-
     return (
         <div className="HomeFirst_Main">
             <h1>Tasks</h1>
